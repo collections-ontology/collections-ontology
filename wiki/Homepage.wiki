@@ -1,6 +1,6 @@
 #summary Collections Ontology (CO) Home.
 
-= Introduction =
+== Introduction ==
 
 The Collections Ontology (CO), originally defined as SWAN Collections, defines unordered collections (Set and Bag) and ordered collections (or List) in OWL DL. 
 

@@ -1,4 +1,4 @@
-#summary Collections Ontology Home.
+#summary Collections Ontology (CO) Home.
 
 = Introduction =
 

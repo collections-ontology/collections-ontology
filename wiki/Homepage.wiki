@@ -6,6 +6,7 @@ The Collections Ontology (CO) defines unordered collections (Set and Bag) and or
 
 === OWL File ===
 You can access the latest version of the Collections Ontology (CO) OWL file through the purl: http://purl.org/co/
+A human readable representation is available through the LODE tool:
 
 === History ===
 

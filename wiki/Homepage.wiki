@@ -9,4 +9,4 @@ You can access the latest version of the Collections Ontology (CO) OWL file here
 
 === History ===
 
-This ontology has been first published by [http://www.paolociccarese.info/ Paolo Ciccarese] in 2007 as SWAN Collections - as it was part of the project SWAN (Semantic Web Applications in Neuromedicine). However, since the origin, the ontology has been conceived as a separate orthogonal module with no dependencies from the rest of the SWAN ontology ecosystem. Since March 2010 the ontology has been renamed Collections Ontology (CO) and is currently maintained by Paolo Ciccarese and Silvio Peroni.
+This ontology has been first published by [http://www.paolociccarese.info/ Paolo Ciccarese] in 2007 as SWAN Collections - as it was part of the project SWAN (Semantic Web Applications in Neuromedicine). However, since the origin, the ontology has been conceived as a separate orthogonal module with no dependencies from the rest of the SWAN ontology ecosystem. Since March 2010 the ontology has been renamed Collections Ontology (CO) and is now maintained by Paolo Ciccarese and Silvio Peroni.

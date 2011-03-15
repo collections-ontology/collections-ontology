@@ -1,5 +1,6 @@
 #summary Left Navigation Menu
 
  * [Homepage]
+ * How to use CO
  * What is new in 2.0
  * [WhoUsesCO Who is using CO]

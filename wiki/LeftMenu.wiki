@@ -2,5 +2,5 @@
 
  * [Homepage]
  * What is new in 2.0
- * How to use CO
+ * CO2 User Guide
  * [WhoUsesCO Who is using CO]

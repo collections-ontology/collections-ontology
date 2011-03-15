@@ -10,4 +10,4 @@ A human readable representation is available through the open source tool [http:
 
 === History ===
 
-This ontology has been first published in 2007 as SWAN Collections - as it was part of the project SWAN (Semantic Web Applications in Neuromedicine). However, since the origin, the ontology has been conceived as a separate orthogonal module with no dependencies from the rest of the SWAN ontology ecosystem.
+This ontology has been first published by [http://www.paolociccarese.info/ Paolo Ciccarese] in 2007 as SWAN Collections - as it was part of the project SWAN (Semantic Web Applications in Neuromedicine). However, since the origin, the ontology has been conceived as a separate orthogonal module with no dependencies from the rest of the SWAN ontology ecosystem.

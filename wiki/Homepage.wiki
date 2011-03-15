@@ -5,7 +5,7 @@
 The Collections Ontology (CO) defines unordered collections (Set and Bag) and ordered collections (or List) in OWL DL. The Collections Ontology has been heavily inspired by the work "[http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.96.3862 Putting OWL in Order: Patterns for Sequences in OWL]" by Drummond et al. (OWL-ED 2006).
 
 === OWL File ===
-You can access the latest version of the Collections Ontology (CO) OWL file here: [http://purl.org/co/]. Or access the human readable version of it available through the open source tool [http://lode.sourceforge.net LODE (Live OWL Documentation Environment)]:
+You can access the latest version of the Collections Ontology (CO) OWL file here: [http://purl.org/co/]. Or access the human readable version of it available through the open source tool [http://lode.sourceforge.net LODE] (Live OWL Documentation Environment).
 
 === History ===
 

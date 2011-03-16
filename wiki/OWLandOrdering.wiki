@@ -60,6 +60,15 @@ OWLList can express:
 [http://collections-ontology.googlecode.com/svn/trunk/images/OWLlistExpressiveness.png]<br/>
 *Picture 2*: OWLList Expressiveness
 
+For instance for the pattern (A*):
+{{{
+List_only_As --> List AND
+hasContents ONLY A AND
+isFollowedBy ONLY (List AND hasContents ONLY A)
+}}}
+
+Still, in OWL-DL there are a bunch of constraints that cannot be defined (and I would suggest to read the paper(2) for the complete list).
+
 The above content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections_31.html Paolo's blog].
 
 === References ===

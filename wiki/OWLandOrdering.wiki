@@ -20,7 +20,7 @@ The above content has been originally published in 2008  in [http://hcklab.blogs
 Drummond et al. (2) proposed a way of representing sequential structures in OWL-DL. Analyzing the work of Hirsh & Kudenko (3) Drummond argued that "their representation requires extensive rewriting, the relation of the resulting structures to the original lists is not intuitive and, more importantly, the resulting structures grow as the square of the length of the list". Then, he describes a general list pattern, an intuitive approach related to that suggested by Hayes (4) and incorporated in the Semantic Web Best Practice Working Group’s note on n-ary relations.
 
 === References ===
-1. Vinay K. Chaudhri, Bill Jarrold, John Pacheco. Exporting Knowledge Bases into OWL. OWL Experiences and Directions (OWLED 2006), Athens, Georgia, USA.
-2. Nicholas Drummond, Alan Rector, Robert Stevens, Georgina Moulton, Matthew Horridge, Hai Wang and Julian Sedenberg (2006). Putting OWL in Order: Paterns for sequences in OWL. OWL Experiences and Directions (OWLED 2006), Athens, Georgia, USA.
-3. Hirsh, H. and D. Kudenko. Representing Sequences in Description Logics. in Fourteenth National Conference on Artificial Intelligence. 1997.
-4. Noy, N.F. and A. Rector, N-ary relations. 2004, Editors Draft, Semantic Web Best Practices Working Group, W3C. 
+ # Vinay K. Chaudhri, Bill Jarrold, John Pacheco. Exporting Knowledge Bases into OWL. OWL Experiences and Directions (OWLED 2006), Athens, Georgia, USA.
+ # Nicholas Drummond, Alan Rector, Robert Stevens, Georgina Moulton, Matthew Horridge, Hai Wang and Julian Sedenberg (2006). Putting OWL in Order: Paterns for sequences in OWL. OWL Experiences and Directions (OWLED 2006), Athens, Georgia, USA.
+ # Hirsh, H. and D. Kudenko. Representing Sequences in Description Logics. in Fourteenth National Conference on Artificial Intelligence. 1997.
+ # Noy, N.F. and A. Rector, N-ary relations. 2004, Editors Draft, Semantic Web Best Practices Working Group, W3C. 

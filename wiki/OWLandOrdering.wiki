@@ -24,9 +24,9 @@ The list pattern works as follow:
 [http://collections-ontology.googlecode.com/svn/trunk/images/OWLlistPattern.png]<br/>
 *Figure 1. OWL List Pattern*
 
-Each item is held in a “cell” (OWLList); each cell has 2 pointers, one to a head (hasContents - functional) and one to the tail cells (hasNext - functional); the end of the list is indicated by a terminator (EmptyList) which also serves to represent the empty list. A transitive property, isFollowedBy, as a super-property of hasNext as been defined as well. In other words the members of any list are the contents of the first element plus the contents of all of the following elements. A separate OWL vocabulary has been defined as the RDF vocabulary cannot be used in OWL-DL.
+Each item is held in a “cell” *OWLList*; each cell has 2 pointers, one to a head *hasContents - functional* and one to the tail cells *hasNext - functional*; the end of the list is indicated by a terminator *EmptyList* which also serves to represent the empty list. A transitive property, *isFollowedBy*, as a super-property of *hasNext* as been defined as well. In other words the members of any list are the contents of the first element plus the contents of all of the following elements. A separate OWL vocabulary has been defined as the RDF vocabulary cannot be used in OWL-DL.
 
-Through the transitive property followedBy it is possible to ask things like: give me all the items that are followedBy "AC" for instance and it doesn't matter what is in between the item and the sequence itself.
+Through the transitive property *followedBy* it is possible to ask things like: give me all the items that are *followedBy* "AC" for instance and it doesn't matter what is in between the item and the sequence itself.
 
 The above content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections_31.html Paolo's blog].
 

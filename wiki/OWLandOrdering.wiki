@@ -58,7 +58,7 @@ ObjectProperty(isFollowedBy
 OWLList can express:
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/OWLlistExpressiveness.png]<br/>
-*Picture 2*:
+*Picture 2*: OWLList Expressiveness
 
 The above content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections_31.html Paolo's blog].
 

@@ -25,3 +25,5 @@ and this is much better than:
 since these statements say that each member individually approved the resolution.
 
 But containers only say that certain identified resources are members; they do not say that other members do not exist. There is no way to exclude that there might be another graph somewhere that describes additional members.
+
+For further examples [http://www.w3.org/TR/REC-rdf-syntax/#containers RDF Primer].

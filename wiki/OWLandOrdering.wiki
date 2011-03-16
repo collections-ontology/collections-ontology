@@ -30,10 +30,29 @@ Through the transitive property *followedBy* it is possible to ask things like: 
 
 In [http://www.co-ode.org/resources/reference/manchester_syntax/ Manchester Syntax]:
 {{{
-  Class(OWLList partial
-     restriction(isFollowedby allValuesFrom(OWLList)) 
-  Class(EmptyList complete
-     OWLList restriction(hasContent maxCardinality(0)))
+Class(OWLList partial
+  restriction(isFollowedBy allValuesFrom(OWLList)) 
+
+Class(EmptyList complete
+  OWLList restriction(hasContents maxCardinality(0)))
+
+EquivalentClasses(
+  EmptyList intersectionOf(
+     OWLList NOT restriction(
+        isFollowedBy SOME owl:Thing)))
+
+ObjectProperty(hasListProperty 
+   domain(OWLList))
+
+ObjectProperty(hasContents 
+   super(hasListProperty) Functional)
+
+ObjectProperty(hasNext 
+   super(isFollowedBy) Functional)
+
+ObjectProperty(isFollowedBy 
+   super(hasListProperty) Transitive range(OWLList))
+     
 }}}
 
 OWLList can express:

@@ -1,4 +1,4 @@
-#summary RDF Containes and Collections
+#summary RDF Containers and Collections
 
 == RDF Containers ==
 RDF allows the usage of three kinds of containers:

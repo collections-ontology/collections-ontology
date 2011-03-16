@@ -5,7 +5,7 @@
 OWL have no support for ordering, but the natural constructs from the underlying RDF vocabulary (rdf:List and rdf:nil) are unavailable in OWL-DL because they are used in its RDF serialization. In principle, rdf:Seq is not illegal but it depends on lexical ordering and has no logical semantics accessible to a DL classifier. 
 
 In other terms (1): 
- # The elements in a container are defined using the relations rdf:_1, rdf:_2, and so on that have no formal definition in RDF. Using them for the purpose of reasoning will require us to define and enforce the properties of these relations. 
+ # The elements in a container are defined using the relations rdf:`_`1, rdf:`_`2, and so on that have no formal definition in RDF. Using them for the purpose of reasoning will require us to define and enforce the properties of these relations. 
  # It is not possible to define a container that has elements only of a specific type. 
  # For updating a specific element in a container in a remote source, one is forced to transmit the whole container. 
  # It is not possible to associate provenance information with the elements in a container.

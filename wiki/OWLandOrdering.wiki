@@ -23,6 +23,9 @@ The list pattern works as follow:
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/OWLlistPattern.png]
 
+
+The above content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections_31.html Paolo's blog].
+
 === References ===
  # Vinay K. Chaudhri, Bill Jarrold, John Pacheco. Exporting Knowledge Bases into OWL. OWL Experiences and Directions (OWLED 2006), Athens, Georgia, USA.
  # Nicholas Drummond, Alan Rector, Robert Stevens, Georgina Moulton, Matthew Horridge, Hai Wang and Julian Sedenberg (2006). Putting OWL in Order: Paterns for sequences in OWL. OWL Experiences and Directions (OWLED 2006), Athens, Georgia, USA.

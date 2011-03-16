@@ -68,3 +68,6 @@ This can also be written in RDF/XML by writing out the same triples (without usi
    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
 </rdf:Description>
 }}}
+RDF imposes no "well-formedness" conditions on the use of the collection vocabulary (it is possible, for instance, to define multiple rdf:first elements), thus, RDF applications that require collections to be well-formed should be written to check that the collection vocabulary is being used appropriately, in order to be fully robust. Maybe OWL which can define additional constraints on the structure of RDF graphs, can rule out some of these cases?
+
+For further examples [http://www.w3.org/TR/REC-rdf-syntax/#containers RDF Primer]. This content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections.html Paolo's blog].

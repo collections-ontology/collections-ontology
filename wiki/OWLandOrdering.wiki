@@ -29,6 +29,12 @@ Each item is held in a “cell” *OWLList*; each cell has 2 pointers, one to a 
 Through the transitive property *followedBy* it is possible to ask things like: give me all the items that are *followedBy* "AC" for instance and it doesn't matter what is in between the item and the sequence itself.
 
 In [http://www.co-ode.org/resources/reference/manchester_syntax/ Manchester Syntax]:
+{{{
+  Class(OWLList partial
+     restriction(isFollowedby allValuesFrom(OWLList)) 
+  Class(EmptyList complete
+     OWLList restriction(hasContent maxCardinality(0)))
+}}}
 
 OWLList can express:
 

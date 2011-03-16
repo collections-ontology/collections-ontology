@@ -21,7 +21,7 @@ Drummond et al. (2) proposed a way of representing sequential structures in OWL-
 
 The list pattern works as follow:
 
-[http://3.bp.blogspot.com/_ERBd_3h53JM/SVvC_Pb9qRI/AAAAAAAAACQ/l4Iqdl3_lRw/s1600-h/Picture+35.png]
+[http://collections-ontology.googlecode.com/svn/trunk/images/OWLlistPattern.png]
 
 === References ===
  # Vinay K. Chaudhri, Bill Jarrold, John Pacheco. Exporting Knowledge Bases into OWL. OWL Experiences and Directions (OWLED 2006), Athens, Georgia, USA.

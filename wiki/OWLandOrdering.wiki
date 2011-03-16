@@ -1,6 +1,6 @@
 #summary OWL and Ordering
 
-= Introduction =
+== OWL and Ordering ==
 
 OWL have no support for ordering, but the natural constructs from the underlying RDF vocabulary (rdf:List and rdf:nil) are unavailable in OWL-DL because they are used in its RDF serialization. In principle, rdf:Seq is not illegal but it depends on lexical ordering and has no logical semantics accessible to a DL classifier. 
 

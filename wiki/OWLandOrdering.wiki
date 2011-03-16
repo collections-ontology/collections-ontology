@@ -30,6 +30,8 @@ Through the transitive property *followedBy* it is possible to ask things like: 
 
 In [http://www.co-ode.org/resources/reference/manchester_syntax/ Manchester Syntax]:
 
+OWLList can express:
+
 The above content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections_31.html Paolo's blog].
 
 === References ===

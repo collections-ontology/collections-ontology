@@ -12,4 +12,6 @@ In other terms (1):
 
 But OWL has greater expressiveness than RDF (with constructs such as transitive properties) and reasoning capabilities (for checking consistency and inferring subsumption). Thus, the idea of reasoning with sequential structures in OWL-DL looks appealing.
 
+This content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections.html Paolo's blog].
+
 1. Vinay K. Chaudhri, Bill Jarrold, John Pacheco. Exporting Knowledge Bases into OWL. OWL Experiences and Directions (OWLED 2006), Athens, Georgia, USA.

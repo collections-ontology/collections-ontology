@@ -41,3 +41,31 @@ In RDF/XML a collection looks something like this:
   </s:familyMembers>
 </rdf:Description>
 }}}
+
+This can also be written in RDF/XML by writing out the same triples (without using rdf:parseType="Collection") using the collection vocabulary:
+{{{
+<rdf:Description rdf:about="http://e.org/family/349">
+   <s:familyMembers rdf:nodeID="sch1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="sch1">
+   <rdf:first rdf:resource="http://e.org/person/Paolo"/>
+   <rdf:rest rdf:nodeID="sch2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="sch2">
+   <rdf:first rdf:resource="http://e.org/person/Emanuele"/>
+<rdf:rest rdf:nodeID="sch3"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="sch3">
+   <rdf:first rdf:resource="http://e.org/person/Maria"/>
+   <rdf:rest rdf:nodeID="sch4"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="sch4">
+   <rdf:first rdf:resource="http://e.org/person/Franco"/>
+   <rdf:rest rdf:resource=
+"http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+}}}

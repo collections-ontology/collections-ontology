@@ -22,6 +22,7 @@ Drummond et al. (2) proposed a way of representing sequential structures in OWL-
 The list pattern works as follow:
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/OWLlistPattern.png]
+*Figure 1. OWL List Pattern*
 
 
 The above content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections_31.html Paolo's blog].

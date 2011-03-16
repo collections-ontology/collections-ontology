@@ -8,22 +8,24 @@ RDF allows the usage of three kinds of containers:
  * *rdf:Alt* - An Alternative or Alt represents a group of resources or literals that are alternatives (typically for a single value of a property). For example, an Alt might be used to describe alternative language translations for the title of a book, or to describe a list of alternative Internet sites at which a resource might be found. An application using a property whose value is an Alt container should be aware that it can choose any one of the members of the group as appropriate. 
 
 For example, a statement about "The resolution was approved by the Rules Committee, having members Fred, Wilma, and Dino" will have the form in triples:
-<pre>
+{{{
   ex:resolution exterms:approvedBy ex:rulesCommittee .
-  
   ex:rulesCommittee rdf:type rdf:Bag .
   ex:rulesCommittee rdf:_1 ex:Fred .
   ex:rulesCommittee rdf:_2 ex:Wilma .
   ex:rulesCommittee rdf:_3 ex:Dino .
-</pre>
+}}}
 and this is much better than:
-<pre>
+{{{
   ex:resolution exterms:approvedBy ex:Fred .
   ex:resolution exterms:approvedBy ex:Wilma .
   ex:resolution exterms:approvedBy ex:Dino .
-</pre>
+}}}
 since these statements say that each member individually approved the resolution.
 
 But containers only say that certain identified resources are members; they do not say that other members do not exist. There is no way to exclude that there might be another graph somewhere that describes additional members.
 
 For further examples [http://www.w3.org/TR/REC-rdf-syntax/#containers RDF Primer].
+
+
+This content has been originally published in 2008 [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections.html here].

@@ -31,3 +31,13 @@ For further examples [http://www.w3.org/TR/REC-rdf-syntax/#containers RDF Primer
 RDF provides support for describing groups containing only the specified members, in the form of RDF collections. An RDF collection is a group of things represented as a list structure in the RDF graph.
 
 In RDF/XML a collection looks something like this:
+{{{
+<rdf:Description rdf:about="http://e.org/family/349">      
+  <s:familyMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="http://e.org/person/Paolo"/>
+    <rdf:Description rdf:about="http://e.org/person/Emanuele"/>
+    <rdf:Description rdf:about="http://e.org/person/Maria"/>
+    <rdf:Description rdf:about="http://e.org/person/Franco"/>
+  </s:familyMembers>
+</rdf:Description>
+}}}

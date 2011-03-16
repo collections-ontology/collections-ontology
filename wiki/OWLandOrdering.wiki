@@ -10,4 +10,6 @@ In other terms (1):
  # For updating a specific element in a container in a remote source, one is forced to transmit the whole container. 
  # It is not possible to associate provenance information with the elements in a container.
 
+But OWL has greater expressiveness than RDF (with constructs such as transitive properties) and reasoning capabilities (for checking consistency and inferring subsumption). Thus, the idea of reasoning with sequential structures in OWL-DL looks appealing.
+
 1. Vinay K. Chaudhri, Bill Jarrold, John Pacheco. Exporting Knowledge Bases into OWL. OWL Experiences and Directions (OWLED 2006), Athens, Georgia, USA.

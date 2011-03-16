@@ -67,7 +67,7 @@ hasContents ONLY A AND
 isFollowedBy ONLY (List AND hasContents ONLY A)
 }}}
 
-Still, in OWL-DL there are a bunch of constraints that cannot be defined (and I would suggest to read the paper(2) for the complete list).
+Still, in OWL-DL there are a bunch of constraints that cannot be defined, and I would suggest to read the paper(2) for the complete list.
 
 The above content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections_31.html Paolo's blog].
 

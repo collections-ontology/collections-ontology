@@ -15,6 +15,8 @@ But OWL has greater expressiveness than RDF (with constructs such as transitive 
 
 The above content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections.html Paolo's blog].
 
+=== Moving forward ===
+
 Drummond et al. (2) proposed a way of representing sequential structures in OWL-DL. Analyzing the work of Hirsh & Kudenko [2] Drummond argued that "their representation requires extensive rewriting, the relation of the resulting structures to the original lists is not intuitive and, more importantly, the resulting structures grow as the square of the length of the list". Then, he describes a general list pattern, an intuitive approach related to that suggested by Hayes [3] and incorporated in the Semantic Web Best Practice Working Group’s note on n-ary relations.
 
 

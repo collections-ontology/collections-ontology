@@ -25,7 +25,4 @@ since these statements say that each member individually approved the resolution
 
 But containers only say that certain identified resources are members; they do not say that other members do not exist. There is no way to exclude that there might be another graph somewhere that describes additional members.
 
-For further examples [http://www.w3.org/TR/REC-rdf-syntax/#containers RDF Primer].
-
-
-This content has been originally published in 2008 [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections.html here].
+For further examples [http://www.w3.org/TR/REC-rdf-syntax/#containers RDF Primer]. This content has been originally published in 2008  in [http://hcklab.blogspot.com/2008/12/moving-towards-swan-collections.html Paolo's blog].

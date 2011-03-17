@@ -26,8 +26,7 @@
         
         <dc:language>en</dc:language>
         <dc:title xml:lang="en">Collections ontology</dc:title>
-        <dc:creator rdf:resource="http://www.hcklab.org/people/paolo-ciccarese/"/>
-        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paolo Ciccarese</dc:contributor>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Ocana</dc:contributor>
         <dc:publisher rdf:resource="http://swan.mindinformatics.org"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 14, 2009</dc:date>

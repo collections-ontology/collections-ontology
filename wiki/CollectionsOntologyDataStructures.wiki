@@ -1,0 +1,7 @@
+#summary Collections Ontology Data Structures.
+
+== Set ==
+
+== Bag ==
+
+== List ==

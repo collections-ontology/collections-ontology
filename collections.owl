@@ -21,13 +21,14 @@
 
 	<owl:Ontology rdf:about="http://swan.mindinformatics.org/ontologies/1.2/collections.owl">
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collections v. 1.2</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</owl:versionInfo>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collections Ontology</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.3</owl:versionInfo>
         
         <dc:language>en</dc:language>
         <dc:title xml:lang="en">Collections ontology</dc:title>
         <dc:creator rdf:resource="http://www.hcklab.org/people/paolo-ciccarese/"/>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paolo Ciccarese</dc:contributor>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:contributor>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Ocana</dc:contributor>
         <dc:publisher rdf:resource="http://swan.mindinformatics.org"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 14, 2009</dc:date>
@@ -172,22 +173,22 @@
      -->
 
     <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/Item -->
-    <owl:Class rdf:about="Item" rdfs:label="(collections) Item">
+    <owl:Class rdf:about="Item" rdfs:label="Item">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <owl:disjointWith rdf:resource="Collection"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Item - Element belonging to a Bag</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element belonging to a Bag</rdfs:comment>
     </owl:Class>
     
     <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/ListItem -->
-    <owl:Class rdf:about="ListItem" rdfs:label="(collections) ListItem">
+    <owl:Class rdf:about="ListItem" rdfs:label="ListItem">
         <rdfs:subClassOf rdf:resource="Item"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ListItem - Element belonging to a list</rdfs:comment>	
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element belonging to a list</rdfs:comment>	
     </owl:Class>
 
     <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/List -->
-    <owl:Class rdf:about="List" rdfs:label="(collections) List">
+    <owl:Class rdf:about="List" rdfs:label="List">
         <rdfs:subClassOf rdf:resource="Bag"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">List - An ordered array of items, that can be present in multiple copies</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ordered array of items, that can be present in multiple copies</rdfs:comment>
             
         <rdfs:subClassOf>
 		    <owl:Restriction>
@@ -204,22 +205,22 @@
     </owl:Class>
 
     <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/Bag -->
-    <owl:Class rdf:about="Bag" rdfs:label="(collections) Bag">
+    <owl:Class rdf:about="Bag" rdfs:label="Bag">
         <rdfs:subClassOf rdf:resource="Collection"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bag - Collection that can have a number of copies of each object</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collection that can have a number of copies of each object</rdfs:comment>
         <owl:disjointWith rdf:resource="Set"/>
     </owl:Class>
     
     <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/Set -->
-    <owl:Class rdf:about="Set" rdfs:label="(collections) Set">
+    <owl:Class rdf:about="Set" rdfs:label="Set">
         <rdfs:subClassOf rdf:resource="Collection"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Set - A collection that cannot contain duplicate elements.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A collection that cannot contain duplicate elements.</rdfs:comment>
     </owl:Class>
     
     <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/Collection -->
-    <owl:Class rdf:about="Collection" rdfs:label="(collections) Collection">
+    <owl:Class rdf:about="Collection" rdfs:label="Collection">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collection - A group of objects that can be considered as a whole.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A group of objects that can be considered as a whole.</rdfs:comment>
     </owl:Class>
 
     <!-- http://www.w3.org/2002/07/owl#Thing -->

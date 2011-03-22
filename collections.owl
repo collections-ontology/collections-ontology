@@ -22,7 +22,7 @@
     <owl:Ontology rdf:about="http://swan.mindinformatics.org/ontologies/1.2/collections.owl">
         <rdfs:label rdf:datatype="&xsd;string">Collections Ontology</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">1.3</owl:versionInfo>
-        <dc:date rdf:datatype="&xsd;string">January 14, 2009</dc:date>
+        <dc:date rdf:datatype="&xsd;string">March 22, 2011</dc:date>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Silvio Peroni</dc:contributor>

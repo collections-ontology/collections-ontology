@@ -30,7 +30,7 @@
         <dc:title xml:lang="en">Collections ontology</dc:title>
         <dc:language>en</dc:language>
         <dc:publisher rdf:resource="http://swan.mindinformatics.org"/>
-        <dc:creator rdf:resource="http://www.hcklab.org/people/paolo-ciccarese/"/>
+        <dc:creator rdf:resource="http://www.paolociccarese.info"/>
     </owl:Ontology>
     
 

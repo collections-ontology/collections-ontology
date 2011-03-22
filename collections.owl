@@ -183,7 +183,7 @@
     <owl:ObjectProperty rdf:about="http://swan.mindinformatics.org/ontologies/1.2/collections/previousItem">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en">has previous item</rdfs:label>
-        <dc:description xml:lang="en">Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the next item of I[i] is I[i-1].</dc:description>
+        <dc:description xml:lang="en">Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the previous item of I[i] is I[i-1].</dc:description>
         <rdfs:comment xml:lang="en">The link to the previous item in a list.</rdfs:comment>
         <owl:inverseOf rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/nextItem"/>
         <rdfs:subPropertyOf rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/preceededBy"/>

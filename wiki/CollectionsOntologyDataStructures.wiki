@@ -7,5 +7,6 @@ A Set is a collection that cannot contain duplicate elements. All the elements o
 *Figure 1: Set representation with Collections Ontology*
 
 == Bag ==
+A Bag is a collection that can have multiple copies of each element. This is performed through the _co:Item_ entity. The _co:Item_ is linking exactly one resource through the relationship _co:itemResource_.
 
 == List ==

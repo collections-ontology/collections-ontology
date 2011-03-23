@@ -9,6 +9,7 @@ A *Set* is a collection that cannot contain duplicate elements. All the elements
 == Bag ==
 A *Bag* is a collection that can have multiple copies of each element. This is performed through the _co:Item_ entity. The _co:Item_ is linking exactly one resource through the relationship _co:itemResource_.
 
+[http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-Bag.png]<br/>
 *Figure 2: How a Bag is represented with Collections Ontology*
 
 == List ==

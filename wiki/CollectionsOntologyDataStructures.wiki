@@ -1,12 +1,10 @@
 #summary Collections Ontology Data Structures.
 
 == Set ==
-A Set is a collection that cannot contain duplicate elements. All the elements of the set are directly linked to it through the property _co:element_. 
+A Set is a collection that cannot contain duplicate elements. All the elements of the set are directly linked to it through the property _co:element_. In RDF, identical elements connected by the same property are, by default, treated as a set.
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-Set.png]<br/>
 *Figure 1: Set representation with Collections Ontology*
-
-_Identical values of element will be eliminated because by default they are treated as a set_. 
 
 == Bag ==
 

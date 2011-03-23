@@ -3,6 +3,8 @@
 == Set ==
 A Set is a collection that cannot contain duplicate elements. All the elements of the set are directly linked to it through the property _co:element_. 
 
+[http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-Set.png]<br/>
+
 _Identical values of element will be eliminated because by default they are treated as a set_. 
 
 == Bag ==

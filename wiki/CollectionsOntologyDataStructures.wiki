@@ -4,9 +4,11 @@
 A *Set* is a collection that cannot contain duplicate elements. All the elements of the set are directly linked to it through the property _co:element_. In RDF, identical elements connected by the same property are, by default, treated as a set.
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-Set.png]<br/>
-*Figure 1: Set representation with Collections Ontology*
+*Figure 1: How a Set is represented with Collections Ontology*
 
 == Bag ==
 A *Bag* is a collection that can have multiple copies of each element. This is performed through the _co:Item_ entity. The _co:Item_ is linking exactly one resource through the relationship _co:itemResource_.
+
+*Figure 2: How a Bag is represented with Collections Ontology*
 
 == List ==

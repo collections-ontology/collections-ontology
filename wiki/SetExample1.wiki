@@ -1,6 +1,6 @@
 #summary Example: Set of CO contributors
 
-== Example Set.1: "Contributors of CO" ==
+== Set example #1: "Contributors of CO" ==
 
 Simplest representation of the set:
 

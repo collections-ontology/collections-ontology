@@ -142,3 +142,5 @@ This could be enough if your application is reacting to FOAF. However, if you wa
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
+
+An alternative to this approach, consists in providing some mapping between FOAF and CO.

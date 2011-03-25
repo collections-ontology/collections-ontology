@@ -43,8 +43,8 @@ It is possible to add labels and provenance data using the desired vocabulary. F
 <http://purl.org/co/example/1/set/1>
  	a co:Set;
  	rdf:label "Collections Ontology Contributors" ;
+        dct:created "2011-03-25" ;
  	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
- 	dct:created "2011-03-25" ;
  	co:element <http://www.hcklab.org/foaf.rdf#me> ;
  	co:element :a1 ;
  	co:element :a2 .

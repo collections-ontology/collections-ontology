@@ -3,31 +3,23 @@
 === Example Set.1: "Contributors of CO" ===
 
 {{{
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix co:  	 <http://purl.org/co/>.
-@prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
-
 <http://purl.org/co/example/1/set/1>
  	a co:Set;
  	rdf:label "Collections Ontology Contributors" ;
  	co:element <http://www.hcklab.org/foaf.rdf#me> ;
  	co:element :a1 ;
- 	co:element :a2 ;
- 	.
+ 	co:element :a2 .
  		
 <http://www.hcklab.org/foaf.rdf#me> 
-    a foaf:Person ;
-    .
+    a foaf:Person .
     
 :a1
     a foaf:Person ;
     foaf:firstName "Marco" ;
-    foaf:lastName "Ocana" ;
-    .
+    foaf:lastName "Ocana" .
     
 :a2
     a foaf:Person ;
     foaf:firstName "Silvio" ;
-    foaf:lastName "Peroni" ;
-    .
+    foaf:lastName "Peroni" .
 }}}

@@ -1,0 +1,3 @@
+#summary Examples of Sets in Collections Ontology
+
+=== Example Set.1 ===

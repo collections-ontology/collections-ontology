@@ -1,7 +1,7 @@
 #summary Example: Set of CO contributors
 
 *Set example #1*
-== "Contributors of CO" ==
+== Modeling the Contributors of CO ==
 
 Simplest representation of the set:
 

@@ -144,3 +144,7 @@ This could be enough if your application is reacting to FOAF. However, if you wa
 }}}
 
 An alternative to this approach, that works with some little inference, consists in providing some mapping between FOAF and CO.
+{{{
+    foaf:Group a co:Set.
+    foaf:member rdfs:subPropertyOf co:element.
+}}}

@@ -87,7 +87,9 @@ If you are a FOAF user, you might want to define the contributors to Collections
  	foaf:member :a2 .
  		
 <http://www.hcklab.org/foaf.rdf#me> 
-    a foaf:Person .
+    a foaf:Person ;
+    foaf:firstName "Paolo" ;
+    foaf:lastName "Ciccarese" .
     
 :a1
     a foaf:Person ;

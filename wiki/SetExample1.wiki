@@ -112,14 +112,15 @@ This could be enough if your application is reacting to FOAF. However, if you wa
 @prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
 
 <http://purl.org/co/example/1/set/1>
- 	a foaf:Group;
- 	a co:Set;
+ 	a foaf:Group ;
  	rdf:label "Collections Ontology Contributors" ;
  	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
  	dct:created "2011-03-25" ;
  	foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
  	foaf:member :a1 ;
  	foaf:member :a2 ;
+ 	# Collections Ontology 
+ 	a co:Set ;
  	co:element <http://www.hcklab.org/foaf.rdf#me> ;
  	co:element :a1 ;
  	co:element :a2 .

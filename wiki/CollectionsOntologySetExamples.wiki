@@ -1,6 +1,6 @@
 #summary Examples of Sets in Collections Ontology
 
-=== Example Set.1 ===
+=== Example Set.1: "Contributors of CO" ===
 
 {{{
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.

@@ -67,7 +67,7 @@ It is possible to add labels and provenance data using the desired vocabulary. F
 }}}
 
 === How would this integrate with FOAF? ===
-If you are a FOAF user, you might want to define the contributors to Collections Ontology as a _FOAF:Group_.
+If you are a FOAF user, you might want to define the contributors to Collections Ontology as a FOAF(Friend Of A Friend) _Group_.
 
 {{{
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.

@@ -1,6 +1,6 @@
 #summary Examples of Sets in Collections Ontology
 
-=== Example Set.1: "Contributors of CO" ===
+== Example Set.1: "Contributors of CO" ==
 
 Simplest representation of the set:
 

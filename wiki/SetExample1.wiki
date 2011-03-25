@@ -66,7 +66,7 @@ It is possible to add labels and provenance data using the desired vocabulary. F
     foaf:lastName "Peroni" .
 }}}
 
-=== How would this integrate with FOAF? ===
+=== How would this integrate, for example, with FOAF? ===
 If you are a FOAF user, you might want to define the contributors to Collections Ontology as a FOAF (Friend Of A Friend) _Group_. Without Collections Ontology:
 
 {{{

@@ -149,4 +149,5 @@ An alternative to this approach, that works with some little inference, consists
 {{{
     foaf:Group a co:Set.
     foaf:member rdfs:subPropertyOf co:element.
+    foaf:member owl:inverseOf foafx:memberOf.
 }}}

@@ -67,6 +67,8 @@ It is possible to add labels and provenance data using the desired vocabulary. F
 }}}
 
 === How would this integrate, for example, with FOAF? ===
+
+*Approach 1: redundant statements*<br/>
 If you are a FOAF user, you might want to define the contributors to Collections Ontology as a FOAF (Friend Of A Friend) _Group_. Without Collections Ontology:
 
 {{{

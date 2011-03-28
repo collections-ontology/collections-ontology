@@ -41,6 +41,7 @@ It is possible to add labels and provenance data using the desired vocabulary. F
 # Snippet 2
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix dct:     <http://purl.org/dc/terms/>.
 @prefix co:  	 <http://purl.org/co/>.
 @prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
@@ -80,6 +81,7 @@ If you are a FOAF user, you might want to define the contributors to Collections
 # Snippet 3
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix dc:      <http://purl.org/dc/elements/1.1/#>.
 @prefix dct:     <http://purl.org/dc/terms/>.
 @prefix pav:     <http://purl.org/pav/>.
@@ -121,6 +123,7 @@ The above example could be enough if your application is reacting to FOAF. Howev
 # Snippet 4
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix dc:      <http://purl.org/dc/elements/1.1/#>.
 @prefix dct:     <http://purl.org/dc/terms/>.
 @prefix pav:     <http://purl.org/pav/>.
@@ -165,6 +168,12 @@ The above example could be enough if your application is reacting to FOAF. Howev
 An alternative to this approach, that works with some little inference, consists in providing some mapping between FOAF and CO.
 {{{
 # Snippet 5
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix co:  	 <http://purl.org/co/>.
+@prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
+@prefix owl:     <http://www.w3.org/2002/07/owl#>.
 
     foaf:Group a co:Set.
     foaf:member rdfs:subPropertyOf co:element.

@@ -5,7 +5,10 @@
 
 Simplest representation of the set:
 
+*Snippet 1*
 {{{
+'*Snippet 1*'
+
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix co:  	 <http://purl.org/co/>.
 @prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.

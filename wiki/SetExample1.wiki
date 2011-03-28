@@ -31,6 +31,7 @@ Simplest representation of the set:
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
+*Snippet 1*
 
 === Adding provenance ===
 It is possible to add labels and provenance data using the desired vocabulary. For example, the following file has been created manually by one of the contributors of the CO ontology.
@@ -65,6 +66,7 @@ It is possible to add labels and provenance data using the desired vocabulary. F
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
+*Snippet 2*
 
 === How would this integrate, for example, with FOAF? ===
 If you are a FOAF user, you might want to define the contributors to Collections Ontology as a FOAF (Friend Of A Friend) _Group_. Without Collections Ontology:
@@ -101,6 +103,7 @@ If you are a FOAF user, you might want to define the contributors to Collections
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
+*Snippet 3*
 
 ====Collections Ontology Approach #1: redundant statements====
 The above example could be enough if your application is reacting to FOAF. However, if you want to introduce a level of abstraction and write code against Collections ontology structures one solution would be to express, at the same time, FOAF and Collections Ontology.
@@ -143,6 +146,7 @@ The above example could be enough if your application is reacting to FOAF. Howev
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
+*Snippet 4*
 
 ====Collections Ontology Approach #2: leveraging inference====
 An alternative to this approach, that works with some little inference, consists in providing some mapping between FOAF and CO.
@@ -151,3 +155,4 @@ An alternative to this approach, that works with some little inference, consists
     foaf:member rdfs:subPropertyOf co:element.
     foaf:member owl:inverseOf foafx:memberOf.
 }}}
+*Snippet 5*

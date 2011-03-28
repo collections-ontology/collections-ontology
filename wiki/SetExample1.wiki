@@ -47,7 +47,7 @@ It is possible to add labels and provenance data using the desired vocabulary. F
 
 <http://purl.org/co/example/1/set/1>
  	a co:Set;
- 	rdf:label "Collections Ontology Contributors" ;
+ 	rdfs:label "Collections Ontology Contributors" ;
         dct:created "2011-03-25" ;
  	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
  	co:element <http://www.hcklab.org/foaf.rdf#me> ;
@@ -56,19 +56,19 @@ It is possible to add labels and provenance data using the desired vocabulary. F
  		
 <http://www.hcklab.org/foaf.rdf#me> 
     a foaf:Person ;
-    rdf:label "Paolo Ciccarese" ;
+    rdfs:label "Paolo Ciccarese" ;
     foaf:firstName "Paolo" ;
     foaf:lastName "Ciccarese" .
     
 :a1
     a foaf:Person ;
-    rdf:label "Marco Ocana" ;
+    rdfs:label "Marco Ocana" ;
     foaf:firstName "Marco" ;
     foaf:lastName "Ocana" .
     
 :a2
     a foaf:Person ;
-    rdf:label "Silvio Peroni" ;
+    rdfs:label "Silvio Peroni" ;
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
@@ -86,7 +86,7 @@ If you are a FOAF user, you might want to define the contributors to Collections
 @prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
 
 <http://purl.org/co/example/1/set/1>
- 	rdf:label "Collections Ontology Contributors" ;
+ 	rdfs:label "Collections Ontology Contributors" ;
  	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
  	dct:created "2011-03-25" ;
         # foaf
@@ -97,19 +97,19 @@ If you are a FOAF user, you might want to define the contributors to Collections
  		
 <http://www.hcklab.org/foaf.rdf#me> 
     a foaf:Person ;
-    rdf:label "Paolo Ciccarese" ;
+    rdfs:label "Paolo Ciccarese" ;
     foaf:firstName "Paolo" ;
     foaf:lastName "Ciccarese" .
     
 :a1
     a foaf:Person ;
-    rdf:label "Marco Ocana" ;
+    rdfs:label "Marco Ocana" ;
     foaf:firstName "Marco" ;
     foaf:lastName "Ocana" .
     
 :a2
     a foaf:Person ;
-    rdf:label "Silvio Peroni" ;
+    rdfs:label "Silvio Peroni" ;
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
@@ -128,7 +128,7 @@ The above example could be enough if your application is reacting to FOAF. Howev
 @prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
 
 <http://purl.org/co/example/1/set/1>
- 	rdf:label "Collections Ontology Contributors" ;
+ 	rdfs:label "Collections Ontology Contributors" ;
  	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
  	dct:created "2011-03-25" ;
         # foaf
@@ -144,19 +144,19 @@ The above example could be enough if your application is reacting to FOAF. Howev
  		
 <http://www.hcklab.org/foaf.rdf#me> 
     a foaf:Person ;
-    rdf:label "Paolo Ciccarese" ;
+    rdfs:label "Paolo Ciccarese" ;
     foaf:firstName "Paolo" ;
     foaf:lastName "Ciccarese" .
     
 :a1
     a foaf:Person ;
-    rdf:label "Marco Ocana" ;
+    rdfs:label "Marco Ocana" ;
     foaf:firstName "Marco" ;
     foaf:lastName "Ocana" .
     
 :a2
     a foaf:Person ;
-    rdf:label "Silvio Peroni" ;
+    rdfs:label "Silvio Peroni" ;
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}

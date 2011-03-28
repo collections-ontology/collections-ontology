@@ -5,9 +5,8 @@
 
 Simplest representation of the set:
 
-*Snippet 1*
 {{{
-'*Snippet 1*'
+# Snippet 1
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix co:  	 <http://purl.org/co/>.
@@ -34,7 +33,6 @@ Simplest representation of the set:
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
-*Snippet 1*
 
 === Adding provenance ===
 It is possible to add labels and provenance data using the desired vocabulary. For example, the following file has been created manually by one of the contributors of the CO ontology.

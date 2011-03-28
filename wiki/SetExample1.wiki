@@ -161,3 +161,5 @@ An alternative to this approach, that works with some little inference, consists
     foaf:member rdfs:subPropertyOf co:element.
     foaf:member owl:inverseOf foafx:memberOf.
 }}}
+
+Given the above assertions, I can run a DL query to find, for instance, all the instances that are members of some foaf:Group.

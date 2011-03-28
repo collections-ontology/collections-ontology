@@ -67,8 +67,6 @@ It is possible to add labels and provenance data using the desired vocabulary. F
 }}}
 
 === How would this integrate, for example, with FOAF? ===
-
-*Approach #1: redundant statements*<br/>
 If you are a FOAF user, you might want to define the contributors to Collections Ontology as a FOAF (Friend Of A Friend) _Group_. Without Collections Ontology:
 
 {{{
@@ -104,7 +102,8 @@ If you are a FOAF user, you might want to define the contributors to Collections
     foaf:lastName "Peroni" .
 }}}
 
-This could be enough if your application is reacting to FOAF. However, if you want to introduce a level of abstraction and write code against Collections ontology structures one solution would be to express, at the same time, FOAF and Collections Ontology.
+*Collections Ontology Approach #1: redundant statements*<br/>
+The above example could be enough if your application is reacting to FOAF. However, if you want to introduce a level of abstraction and write code against Collections ontology structures one solution would be to express, at the same time, FOAF and Collections Ontology.
 
 {{{
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.

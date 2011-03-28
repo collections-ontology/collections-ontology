@@ -20,24 +20,21 @@ Simplest representation of the set:
  		
 <http://www.hcklab.org/foaf.rdf#me> 
     a foaf:Person ;
-    rdf:label "Paolo Ciccarese" ;
     foaf:firstName "Paolo" ;
     foaf:lastName "Ciccarese" .
     
 :a1
     a foaf:Person ;
-    rdf:label "Marco Ocana" ;
     foaf:firstName "Marco" ;
     foaf:lastName "Ocana" .
     
 :a2
     a foaf:Person ;
-    rdf:label "Silvio Peroni" ;
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
 
-=== Adding provenance ===
+=== Adding provenance and labels ===
 It is possible to add labels and provenance data using the desired vocabulary. For example, the following file has been created manually by one of the contributors of the CO ontology.
 
 {{{

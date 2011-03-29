@@ -169,14 +169,9 @@ An alternative to this approach, that works with some little inference, consists
 {{{
 # Snippet 5
 
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix co:  	 <http://purl.org/co/>.
-@prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
-@prefix owl:     <http://www.w3.org/2002/07/owl#>.
-
-    foaf:Group rdfs:subClassOf co:Set.
-    foaf:member rdfs:subPropertyOf co:element.
-    foaf:member owl:inverseOf foafx:memberOf.
+foaf:Group rdfs:subClassOf co:Set.
+foaf:member rdfs:subPropertyOf co:element.
+foaf:member owl:inverseOf foafx:memberOf.
 }}}
 
 Given the above assertions, I can manage to treat the _foaf:Group_ as a _co:Set_ without altering the original code nor introducing redundancies. 

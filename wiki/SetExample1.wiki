@@ -209,4 +209,4 @@ foaf:member rdfs:subPropertyOf co:element .
     foaf:lastName "Peroni" .
 }}}
 
-Given the above assertions, I can manage to treat the _foaf:Group_ as a _co:Set_ without altering the original code nor introducing redundancies. 
+Given the above assertions, we can manage to treat the _foaf:Group_ as a _co:Set_ without altering the original code nor introducing redundancies. 

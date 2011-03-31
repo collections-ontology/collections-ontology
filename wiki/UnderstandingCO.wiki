@@ -1,0 +1,7 @@
+#summary Understanding CO
+
+== Understanding Collections Ontology (CO) ==
+
+In order to understand the reasons behind the creation of the Collections Ontology we would suggest to start reading the following pages:   
+ # [RDFContainersAndCollections RDF Containers and Collections]  
+ # [OWLandOrdering OWL and Ordering]

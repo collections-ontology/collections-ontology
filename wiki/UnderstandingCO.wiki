@@ -2,7 +2,8 @@
 
 == Understanding Collections Ontology (CO) ==
 
-In order to understand the reasons behind the creation of the Collections Ontology and the supported data structures, we would suggest starting reading the following pages:   
+Collections Ontology (CO) is an OWL ontology currently representing three different data structures: [CollectionsOntologyDataStructures Set, Bag and List]. 
+
+If you are interested in better understanding the reasons behind the creation of the Collections Ontology we would suggest starting reading the following pages:   
  # [RDFContainersAndCollections RDF Containers and Collections]  
  # [OWLandOrdering OWL and Ordering]
- # [CollectionsOntologyDataStructures Representing Set, Bag and List with Collections Ontology]

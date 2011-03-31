@@ -2,7 +2,7 @@
 
 == Understanding Collections Ontology (CO) ==
 
-In order to understand the reasons behind the creation of the Collections Ontology we would suggest starting reading the following pages:   
+In order to understand the reasons behind the creation of the Collections Ontology and the supported data structures, we would suggest starting reading the following pages:   
  # [RDFContainersAndCollections RDF Containers and Collections]  
  # [OWLandOrdering OWL and Ordering]
  # [CollectionsOntologyDataStructures Set, Bag and List with Collections Ontology]

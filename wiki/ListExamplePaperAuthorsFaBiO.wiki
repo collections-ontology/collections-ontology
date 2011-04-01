@@ -7,7 +7,7 @@ A simple representation of the authors of a conference paper using the <a href="
 # Snipped 1
 
 @prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix dc:			<http://purl.org/dc/elements/1.1/#>.
+@prefix dc:		<http://purl.org/dc/elements/1.1/#>.
 @prefix dcterms: 	<http://purl.org/dc/terms/> .
 @prefix fabio: 		<http://purl.org/spar/fabio/> .
 @prefix foaf:		<http://xmlns.com/foaf/0.1/>.
@@ -32,11 +32,11 @@ How can I specify the order among authors as they appears on the paper head? Wit
 # Snipped 2
 
 @prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix dc:			<http://purl.org/dc/elements/1.1/#>.
+@prefix dc:		<http://purl.org/dc/elements/1.1/#>.
 @prefix dcterms: 	<http://purl.org/dc/terms/> .
 @prefix fabio: 		<http://purl.org/spar/fabio/> .
 @prefix foaf:		<http://xmlns.com/foaf/0.1/> .
-@prefix co:			<http://purl.org/co/> .
+@prefix co:		<http://purl.org/co/> .
 
 <http://dblp.uni-trier.de/rec/bibtex/conf/owled/DrummondRSMHWS06> a fabio:ConferencePaper
 	; dc:title "Putting OWL in Order: Patterns for Sequences in OWL"
@@ -75,11 +75,11 @@ In this way, we did not define any link between the function of being an author 
 @prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    	<http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:		<http://www.w3.org/2002/07/owl#> .
-@prefix dc:			<http://purl.org/dc/elements/1.1/#>.
+@prefix dc:		<http://purl.org/dc/elements/1.1/#>.
 @prefix dcterms: 	<http://purl.org/dc/terms/> .
 @prefix fabio: 		<http://purl.org/spar/fabio/> .
 @prefix foaf:		<http://xmlns.com/foaf/0.1/> .
-@prefix co:			<http://purl.org/co/> .
+@prefix co:		<http://purl.org/co/> .
 
 :ListOfPeople owl:equivalentClass [ a owl:Class 
 	; owl:intersectionOf ( 

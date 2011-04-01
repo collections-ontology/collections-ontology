@@ -218,11 +218,11 @@
     
 
 
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/preceededBy -->
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/precededBy -->
 
-    <owl:ObjectProperty rdf:about="http://swan.mindinformatics.org/ontologies/1.2/collections/preceededBy">
+    <owl:ObjectProperty rdf:about="http://swan.mindinformatics.org/ontologies/1.2/collections/precededBy">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label xml:lang="en">is preceeded by</rdfs:label>
+        <rdfs:label xml:lang="en">is preceded by</rdfs:label>
         <dc:description xml:lang="en">Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the item I[i] is preceded by I[i-1], ... , I[2] and I[1].</dc:description>
         <rdfs:comment xml:lang="en">The link to the preceding item in a list.</rdfs:comment>
         <owl:inverseOf rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/followedBy"/>
@@ -238,7 +238,7 @@
         <dc:description xml:lang="en">Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the previous item of I[i] is I[i-1].</dc:description>
         <rdfs:comment xml:lang="en">The link to the previous item in a list.</rdfs:comment>
         <owl:inverseOf rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/nextItem"/>
-        <rdfs:subPropertyOf rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/preceededBy"/>
+        <rdfs:subPropertyOf rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/precededBy"/>
     </owl:ObjectProperty>
     
 
@@ -331,13 +331,13 @@
         <rdfs:subClassOf rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/Bag"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/firstItem"/>
+                <owl:onProperty rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/lastItem"/>
                 <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/lastItem"/>
+                <owl:onProperty rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/firstItem"/>
                 <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>

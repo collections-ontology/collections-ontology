@@ -115,3 +115,17 @@ In this way, we did not define any link between the function of being an author 
 :a6 a foaf:Person ; foaf:givenName "Hai H." ; foaf:familyName "Wang" .
 :a7 a foaf:Person ; foaf:givenName "Julian" ; foaf:familyName "Seidenberg" .
 }}}
+
+=== Inferences ===
+By means of CO inference capabilities, it is possible to make a list in a less verbose way, leaving to infer all the others list-to-item and item-to-item links to a reasoner. In fact, the list presented in the previous example can be re-written as follows:
+
+{{{
+:authors a co:ListOfPeople
+	; co:firstItem [ co:itemContent :a1
+	; co:nextItem  [ co:itemContent :a2
+	; co:nextItem  [ co:itemContent :a3
+	; co:nextItem  [ co:itemContent :a4
+	; co:nextItem  [ co:itemContent :a5
+	; co:nextItem  [ co:itemContent :a6
+	; co:nextItem  [ co:itemContent :a7 ] ] ] ] ] ] ] .
+}}}

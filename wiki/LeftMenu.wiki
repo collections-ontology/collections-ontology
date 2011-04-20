@@ -1,6 +1,6 @@
 #summary Left Navigation Menu
 
  * [Homepage]
- * What is new in 2.0
+ * [WhatsNew2] What is new in 2.0
  * [UnderstandingCO Understanding CO]
  * [WhoUsesCO Who is using CO]

@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Collections Ontology and FOAF Group
 
 === How would this integrate, for example, with FOAF? ===
 If you are a FOAF user, you might want to define the contributors to Collections Ontology as a FOAF (Friend Of A Friend) _Group_. Without Collections Ontology this would look something like:

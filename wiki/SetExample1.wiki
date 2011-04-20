@@ -1,7 +1,7 @@
-#summary Example: Defining a Set with the CO contributors (and integrating with FOAF)
+#summary Example: Defining a Set with the CO contributors
 
 *Set example #1*
-== Modeling the Contributors of Collections Ontology (and integrating with FOAF) ==
+== Modeling the Contributors of Collections Ontology ==
 
 Simplest representation of the set:
 

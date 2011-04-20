@@ -14,14 +14,14 @@ If you are a FOAF user, you might want to define the contributors to Collections
 @prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
 
 <http://purl.org/co/example/1/set/1>
- 	rdfs:label "Collections Ontology Contributors" ;
- 	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
- 	dct:created "2011-03-25" ;
-        # foaf
-        a foaf:Group ;
- 	foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
- 	foaf:member :a1 ;
- 	foaf:member :a2 ;
+    rdfs:label "Collections Ontology Contributors" ;
+    dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+    dct:created "2011-03-25" ;
+    # foaf
+    a foaf:Group ;
+    foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
+    foaf:member :a1 ;
+    foaf:member :a2 ;
  		
 <http://www.hcklab.org/foaf.rdf#me> 
     a foaf:Person ;
@@ -61,25 +61,25 @@ One possible approach consists in declaring a _FOAF:Group_ to be, at the same ti
 @prefix foafx:   <http://blah.com/foafx/>.
 
 <http://purl.org/co/example/1/group/1>
- 	rdfs:label "Collections Ontology Contributors" ;
- 	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
- 	dct:created "2011-03-25" ;
+    rdfs:label "Collections Ontology Contributors" ;
+    dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+    dct:created "2011-03-25" ;
     # foaf
     a foaf:Group ;
- 	foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
- 	foaf:member :a1 ;
- 	foaf:member :a2 ;
- 	foafx:memberSet <http://purl.org/co/example/1/set/1> .
+    foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
+    foaf:member :a1 ;
+    foaf:member :a2 ;
+    foafx:memberSet <http://purl.org/co/example/1/set/1> .
 
 <http://purl.org/co/example/1/set/1>
- 	rdfs:label "Collections Ontology Contributors" ;
- 	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
- 	dct:created "2011-03-25" ;
- 	# Collections Ontology 
- 	a co:Set ;
- 	co:element <http://www.hcklab.org/foaf.rdf#me> ;
- 	co:element :a1 ;
- 	co:element :a2 .
+    rdfs:label "Collections Ontology Contributors" ;
+    dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+    dct:created "2011-03-25" ;
+    # Collections Ontology 
+    a co:Set ;
+    co:element <http://www.hcklab.org/foaf.rdf#me> ;
+    co:element :a1 ;
+    co:element :a2 .
  		
 <http://www.hcklab.org/foaf.rdf#me> 
     a foaf:Person ;
@@ -129,14 +129,14 @@ foaf:Group rdfs:subClassOf co:Set .
 foaf:member rdfs:subPropertyOf co:element .
 
 <http://purl.org/co/example/1/set/1>
- 	rdfs:label "Collections Ontology Contributors" ;
- 	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
- 	dct:created "2011-03-25" ;
-        # foaf
-        a foaf:Group ;
- 	foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
- 	foaf:member :a1 ;
- 	foaf:member :a2 .
+    rdfs:label "Collections Ontology Contributors" ;
+    dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+    dct:created "2011-03-25" ;
+    # foaf
+    a foaf:Group ;
+    foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
+    foaf:member :a1 ;
+    foaf:member :a2 .
  		
 <http://www.hcklab.org/foaf.rdf#me> 
     a foaf:Person ;

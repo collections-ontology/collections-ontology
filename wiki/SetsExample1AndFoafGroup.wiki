@@ -69,7 +69,7 @@ One possible approach consists in declaring a _FOAF:Group_ to be, at the same ti
     foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
     foaf:member :a1 ;
     foaf:member :a2 ;
-    foafx:memberSet <http://purl.org/co/example/1/set/1> .
+    foafx:membersSet <http://purl.org/co/example/1/set/1> .
 
 <http://purl.org/co/example/1/set/1>
     rdfs:label "Collections Ontology Contributors" ;

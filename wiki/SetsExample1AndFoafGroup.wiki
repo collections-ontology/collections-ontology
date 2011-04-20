@@ -102,7 +102,7 @@ One possible approach consists in declaring a _FOAF:Group_ to be, at the same ti
 
 This approach is easy to implement but introduces a couple of issues: redundancies and some incompatibilities with the mathematical notion of Set. In fact, let's say we have two groups: 'The Golf Buddies' and the 'Authors of a piece of software'. These two groups have different identities, goals and life spans and therefore are identified different URIs. However, they happen to have the same exact members and, in terms of Set, they could ideally share the same URI. 
 
-In other words, we have a case of same set of members but still different groups. In mixing up the two concept (Set and Group) we have an issue.
+In other words, we have a case of same set of members but still different groups. In mixing up the two concepts (Set and Group) we have an issue.
 
 ====CO:Set and FOAF:Group Approach #2: modeling the set separatly====
 An alternative to the above approach, is to model _FOAF:Group_ and _CO:Set_ separately so that two different groups link the same set of members.

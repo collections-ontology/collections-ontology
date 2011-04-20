@@ -373,6 +373,41 @@
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
     <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://swan.mindinformatics.org/ontologies/1.2/collections/List"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/firstItem"/>
+                        <owl:someValuesFrom rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/Item"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/lastItem"/>
+                        <owl:someValuesFrom rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/Item"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://swan.mindinformatics.org/ontologies/1.2/collections/List"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/item"/>
+                <owl:someValuesFrom rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections/ListItem"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+    </owl:Class>
 </rdf:RDF>
 
 

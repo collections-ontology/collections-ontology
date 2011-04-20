@@ -131,14 +131,14 @@ An alternative to the above approach, is to model _FOAF:Group_ and _CO:Set_ sepa
     foafx:memberSet <http://purl.org/co/example/1/set/1> .
 
 <http://purl.org/co/example/1/set/1>
-   rdfs:label "Collections Ontology Contributors" ;
-   dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
-   dct:created "2011-03-25" ;
-   # Collections Ontology 
-   a co:Set ;
-   co:element <http://www.hcklab.org/foaf.rdf#me> ;
-   co:element :a1 ;
-   co:element :a2 .
+    rdfs:label "Collections Ontology Contributors" ;
+    dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+    dct:created "2011-03-25" ;
+    # Collections Ontology 
+    a co:Set ;
+    co:element <http://www.hcklab.org/foaf.rdf#me> ;
+    co:element :a1 ;
+    co:element :a2 .
  		
 <http://www.hcklab.org/foaf.rdf#me> 
     a foaf:Person ;

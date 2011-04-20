@@ -161,6 +161,23 @@ An alternative to the above approach, is to model _FOAF:Group_ and _CO:Set_ sepa
 
 With this approach, if we introduce a second group with a different URI, we can still refer to the very same set of members.
 
+{{{
+# Snippet 6
+
+...
+<http://purl.org/co/example/1/group/2>
+    rdfs:label "Golf Buddies" ;
+    dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+    dct:created "2011-03-25" ;
+    # foaf
+    a foaf:Group ;
+    foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
+    foaf:member :a1 ;
+    foaf:member :a2 ;
+    foafx:memberSet <http://purl.org/co/example/1/set/1> .
+...
+}}}
+
 ====Approach #3: using inference====
 
 {{{

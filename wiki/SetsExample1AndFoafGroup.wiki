@@ -44,7 +44,9 @@ If you are a FOAF user, you might want to define the contributors to Collections
 
 The above example could be enough if your application is reacting to FOAF. However, if you want to introduce a level of abstraction and write code against Collections ontology structures one solution would be to use, at the same time, FOAF and Collections Ontology.
 
-====Collections Ontology Approach #1: redundant statements (not recommended)====
+====CO:Set and FOAF:Group Approach #1: redundant statements (not recommended)====
+
+One possible approach consists in declaring a _FOAF:Group_ to be, at the same time, a _CO:Set_.
 
 {{{
 # Snippet 4

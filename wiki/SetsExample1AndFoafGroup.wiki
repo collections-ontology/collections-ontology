@@ -93,8 +93,10 @@ One possible approach consists in declaring a _FOAF:Group_ to be, at the same ti
     foaf:lastName "Peroni" .
 }}}
 
-====Collections Ontology Approach #2: leveraging inference====
-An alternative to this approach, that works with some little inference, consists in providing some mapping between FOAF and CO.
+This approach is easy to implement but introduces a couple of issues: redundancies and some incompatibilities with the mathematical notion of Set. In fact, let's say we have two groups: 'The Golf Buddies' and the 'Authors of a piece of software'. These two groups, that have different URIs, happen to have the same exact members PersonA and PersonB. Mathematically speaking the two groups share the very same set of members which could ideally share the same URI. However, the groups do have different identities, goals and life spans... and this motivates the two different URIs. In other words, we have a case of same set of members but still different groups. In mixing up the two concerns we have an issue.
+
+====CO:Set and FOAF:Group Approach #2: modeling the set separatly====
+An alternative to the above approach, is to model _FOAF:Group_ and _CO:Set_ separately so that two different groups link the same set of members.
 {{{
 # Snippet 5
 

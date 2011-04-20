@@ -104,7 +104,7 @@ This approach is easy to implement but introduces a couple of issues: redundanci
 
 In other words, we have a case of same set of members but still different groups. In mixing up the two concepts (Set and Group) we have an issue.
 
-====CO:Set and FOAF:Group Approach #2: modeling the set separatly====
+====CO:Set and FOAF:Group Approach #2: modeling the set separately====
 An alternative to the above approach, is to model _FOAF:Group_ and _CO:Set_ separately so that two different groups link the same set of members.
 
 {{{
@@ -159,6 +159,7 @@ An alternative to the above approach, is to model _FOAF:Group_ and _CO:Set_ sepa
     foaf:lastName "Peroni" .
 }}}
 
+With this approach, if we introduce a second group with a different URI, we can still refer to the very same set of members.
 
 
 {{{

@@ -58,16 +58,23 @@ One possible approach consists in declaring a _FOAF:Group_ to be, at the same ti
 @prefix pav:     <http://purl.org/pav/>.
 @prefix co:  	 <http://purl.org/co/>.
 @prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
+@prefix foafx:   <http://blah.com/foafx/>.
+
+<http://purl.org/co/example/1/group/1>
+ 	rdfs:label "Collections Ontology Contributors" ;
+ 	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+ 	dct:created "2011-03-25" ;
+    # foaf
+    a foaf:Group ;
+ 	foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
+ 	foaf:member :a1 ;
+ 	foaf:member :a2 ;
+ 	foafx:memberSet <http://purl.org/co/example/1/set/1> .
 
 <http://purl.org/co/example/1/set/1>
  	rdfs:label "Collections Ontology Contributors" ;
  	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
  	dct:created "2011-03-25" ;
-        # foaf
-        a foaf:Group ;
- 	foaf:member <http://www.hcklab.org/foaf.rdf#me> ;
- 	foaf:member :a1 ;
- 	foaf:member :a2 ;
  	# Collections Ontology 
  	a co:Set ;
  	co:element <http://www.hcklab.org/foaf.rdf#me> ;
@@ -91,14 +98,23 @@ One possible approach consists in declaring a _FOAF:Group_ to be, at the same ti
     rdfs:label "Silvio Peroni" ;
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
-}}}
 
-This approach is easy to implement but introduces a couple of issues: redundancies and some incompatibilities with the mathematical notion of Set. In fact, let's say we have two groups: 'The Golf Buddies' and the 'Authors of a piece of software'. These two groups, that have different URIs, happen to have the same exact members PersonA and PersonB. Mathematically speaking the two groups share the very same set of members which could ideally share the same URI. However, the groups do have different identities, goals and life spans... and this motivates the two different URIs. In other words, we have a case of same set of members but still different groups. In mixing up the two concerns we have an issue.
+This approach is easy to implement but introduces a couple of issues: redundancies and some incompatibilities with the mathematical notion of Set. In fact, let's say we have two groups: 'The Golf Buddies' and the 'Authors of a piece of software'. These two groups have different identities, goals and life spans and therefore are identified different URIs. However, they happen to have the same exact members and, in terms of Set, they could ideally share the same URI. 
+
+In other words, we have a case of same set of members but still different groups. In mixing up the two concept (Set and Group) we have an issue.
 
 ====CO:Set and FOAF:Group Approach #2: modeling the set separatly====
 An alternative to the above approach, is to model _FOAF:Group_ and _CO:Set_ separately so that two different groups link the same set of members.
+
 {{{
 # Snippet 5
+
+}}}
+
+
+
+{{{
+# Snippet 6
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.

@@ -98,6 +98,7 @@ One possible approach consists in declaring a _FOAF:Group_ to be, at the same ti
     rdfs:label "Silvio Peroni" ;
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
+}}}
 
 This approach is easy to implement but introduces a couple of issues: redundancies and some incompatibilities with the mathematical notion of Set. In fact, let's say we have two groups: 'The Golf Buddies' and the 'Authors of a piece of software'. These two groups have different identities, goals and life spans and therefore are identified different URIs. However, they happen to have the same exact members and, in terms of Set, they could ideally share the same URI. 
 

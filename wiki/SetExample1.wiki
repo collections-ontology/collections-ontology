@@ -1,4 +1,4 @@
-#summary Example: Defining a Set with the CO contributors
+#summary Example: Defining the Set of the CO contributors
 
 *Set example #1*
 == Modeling the Contributors of Collections Ontology ==

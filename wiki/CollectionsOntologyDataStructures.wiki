@@ -12,6 +12,6 @@ A *Bag* is a collection that can have multiple copies of each element. This is p
 [http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-Bag.png]<br/>
 *Figure 2: How a Bag is represented with Collections Ontology*
 
-In the v2.0 of Collections Ontology, thanks to the new OWL2 feature named [http://www.w3.org/TR/owl2-primer/#Property_Chains Property Chains] it has been possible to ...
+In the v2.0 of Collections Ontology, thanks to the new [http://www.w3.org/TR/2009/PR-owl2-overview-20090922/ OWL2] feature named [http://www.w3.org/TR/owl2-primer/#Property_Chains Property Chains] it has been possible to ...
 
 == List ==

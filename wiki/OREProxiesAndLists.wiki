@@ -1,4 +1,4 @@
-#summary Handling ORE proxies with co:List
+#summary Handling ORE proxies with CO
 
 == The ORE specification and its features ==
 The [http://www.openarchives.org/ore/1.0/datamodel Open Reuse and Exchange specification] (ORE specification) is a standard defined by the [http://www.openarchives.org/ Open Archives Initiative] for describing and exchanging aggregations of Web resources.
@@ -12,3 +12,25 @@ It is possible to use particular kinds of resources, called [http://www.openarch
 Moreover, by using proxies, we can specify an order (with an external vocabulary) for aggregated resources of an aggregation, if needed, as shown in the following figure:
 
 http://www.openarchives.org/ore/1.0/datamodel-images/Proxy.jpg
+
+All these scenarios can be easily integrated with CO.
+
+== Bibliographic collection as set of aggregated records ==
+Bibliographic collections, handled by particular software such as [http://www.mendeley.com Mendeley], are just set of aggregated bibliographic records. Usually, these collections are used by authors of articles and nooks to store and retrieve specific references they cite within their works.
+
+{{{
+@prefix ore: <http://www.openarchives.org/ore/items/> .
+@prefix co: <http://purl.org/co/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix : <http://www.example.com/> .
+
+:myOwnBibliographicCollection a ore:Aggregate
+    ; ore:aggregates
+          doi:10.1080/13614568.2010.497194 
+        , doi:10.1016/j.jbi.2008.04.010 .
+
+:myOwnBibliographicCollection a co:Set
+    ; co:element
+          doi:10.1080/13614568.2010.497194 
+        , doi:10.1016/j.jbi.2008.04.010 .
+}}}

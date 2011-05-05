@@ -6,3 +6,9 @@ The [http://www.openarchives.org/ore/1.0/datamodel Open Reuse and Exchange speci
 The main concept of this specification is the _Aggregation_, i.e., a particular resource that aggregates, either logically or physically, other resources, as shown in the following figure:
 
 http://www.openarchives.org/ore/1.0/datamodel-images/ReMAggregates.jpg
+
+It is possible to use particular kinds of resources, called [http://www.openarchives.org/ore/1.0/datamodel#Proxy proxies], so as to refer to a specific aggregated resource in a context of a particular aggregation.
+
+Moreover, by using proxies, we can specify an order (with an external vocabulary) for aggregated resources of an aggregation, if needed, as shown in the following figure:
+
+http://www.openarchives.org/ore/1.0/datamodel-images/Proxy.jpg

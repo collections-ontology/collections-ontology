@@ -48,7 +48,7 @@ ObjectProperty: ore:aggregates
     EquivalentTo: co:element
 }}}
 
-we can infer all the co:Set statements starting from the following ones:
+we can infer all the remaining statements starting from the following ones:
 
 {{{
 @prefix ore: <http://www.openarchives.org/ore/items/> .
@@ -127,7 +127,7 @@ ObjectProperty: ore:proxyFor
     EquivalentTo: co:itemContent
 }}}
 
-In this way, we can infer all the co:Bag statements starting from the following ones:
+In this way, we can infer all the remaining statements starting from the following ones:
 
 {{{
 @prefix ore:     <http://www.openarchives.org/ore/items/> .
@@ -140,7 +140,7 @@ In this way, we can infer all the co:Bag statements starting from the following 
           [ ore:proxyFor w3:owl2-syntax
               ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
                 Structural Specification and Functional-Style Syntax" ]
-        ,  [ ore:proxyFor w3:rdf-concepts
+        , [ ore:proxyFor w3:rdf-concepts
               ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
                 Concepts and Abstract Syntax" ] .
 

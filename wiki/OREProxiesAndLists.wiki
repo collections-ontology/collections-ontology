@@ -20,9 +20,9 @@ Bibliographic collections, handled by particular software such as [http://www.me
 
 {{{
 @prefix ore: <http://www.openarchives.org/ore/items/> .
-@prefix co: <http://purl.org/co/> .
+@prefix co:  <http://purl.org/co/> .
 @prefix doi: <http://dx.doi.org/> .
-@prefix : <http://www.example.com/> .
+@prefix :    <http://www.example.com/> .
 
 :myOwnBibliographicCollection a ore:Aggregate
     ; ore:aggregates

@@ -61,7 +61,7 @@ we can infer all the co:Set statements starting from the following ones:
         , doi:10.1016/j.jbi.2008.04.010 .
 }}}
 
-== Bibliographic references of papers as bag of aggregated contextual records ==
+== Bibliographic references of a paper ==
 When we are writing a scientific paper, we use to refer to bibliographic references, each of them referencing a precise paper, for explicitly citing other works in our paper. Of course, two bibliographic references, even when defined in two different papers and referring to the same work, can have associated particular (and contextual) metadata that change reference by reference. For example:
 
 {{{

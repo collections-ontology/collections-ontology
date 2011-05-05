@@ -35,7 +35,7 @@ Our personal scientific library, composed by a large number of works, is actuall
         , doi:10.1016/j.jbi.2008.04.010 .
 }}}
 
-In the previous snippet both ore:Aggregation and co:Set are used to describe the composition of a bibliographic collection through two different vocabularies. A much compact definition of these assertions can be easily done by adding a bit of ontological alignment between the two ontologies and, then, inferring what is not explicitly asserted. For instance, if the following Manchester Syntax extension of ORE is considered:
+In the previous snippet both ore:Aggregation and co:Set are used to describe the composition of a set of papers through two different vocabularies. A much compact definition of these assertions can be easily done by adding a bit of ontological alignment between the two ontologies and, then, inferring what is not explicitly asserted. For instance, if the following Manchester Syntax extension of ORE is considered:
 
 {{{
 Prefix: ore: <http://www.openarchives.org/ore/items/>
@@ -115,6 +115,59 @@ When we are writing a scientific paper, we use to refer to bibliographic referen
     ; co:item [  
         a co:Item  
             ; co:itemContent w3:rdf-sparql-query 
+            ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
+              W3C Recommendation 15 January 2008" ] .
+}}}
+
+In the previous snippet both ore:Aggregation and co:Bag are used to describe two different bibliographic reference collections through two different vocabularies. A much compact definition of these assertions can be easily done by adding a bit of ontological alignment between the two ontologies and, then, inferring what is not explicitly asserted. For instance, modifying the previously-defined Manchester Syntax extension of ORE as follows:
+
+{{{
+Prefix: ore: <http://www.openarchives.org/ore/items/>
+Prefix: co:  <http://purl.org/co/>
+
+Class: ore:Aggregation
+    SubClassOf: co:Set or 
+                (co:Bag that co:item only ore:Proxy)
+
+ObjectProperty: ore:aggregates
+    SubPropertyOf: co:element
+
+ObjectProperty: ore:proxyIn
+    SubPropertyOf: co:itemOf
+
+ObjectProperty: ore:proxyFor
+    SubPropertyOf: co:item
+}}}
+
+In this way, we can infer all the co:Bag statements starting from the following ones:
+
+{{{
+@prefix ore:     <http://www.openarchives.org/ore/items/> .
+@prefix w3:     <http://www.w3.org/TR/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix :        <http://www.example.com/> .
+
+:paperOneBibligraphicReferenceCollection a ore:Aggregation
+    ; ore:aggregates [ 
+        a ore:Proxy 
+            ; ore:proxyFor w3:owl2-syntax
+            ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
+              Structural Specification and Functional-Style Syntax" ]
+    ; ore:aggregates [ 
+        a ore:Proxy 
+            ; ore:proxyFor w3:rdf-concepts
+            ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
+              Concepts and Abstract Syntax" ] .
+
+:paperTwoBibligraphicReferenceCollection a ore:Aggregation
+    ; ore:aggregates [ 
+        a ore:Proxy
+            ; ore:proxyFor w3:owl2-syntax
             ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
-              W3C Recommendation 27 October 2009" ] .
+              W3C Recommendation 27 October 2009" ]
+    ; ore:aggregates [ 
+        a ore:Proxy 
+            ; ore:proxyFor w3:rdf-sparql-query
+            ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
+              W3C Recommendation 15 January 2008" ] .
 }}}

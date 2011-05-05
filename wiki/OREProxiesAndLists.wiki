@@ -24,13 +24,39 @@ Bibliographic collections, handled by particular software such as [http://www.me
 @prefix doi: <http://dx.doi.org/> .
 @prefix :    <http://www.example.com/> .
 
-:myOwnBibliographicCollection a ore:Aggregate
+:myOwnBibliographicCollection a ore:Aggregation
     ; ore:aggregates
           doi:10.1080/13614568.2010.497194 
         , doi:10.1016/j.jbi.2008.04.010 .
 
 :myOwnBibliographicCollection a co:Set
     ; co:element
+          doi:10.1080/13614568.2010.497194 
+        , doi:10.1016/j.jbi.2008.04.010 .
+}}}
+
+In the previous snippet both ore:Aggregation and co:Set are used to describe the composition of a bibliographic collection through two different vocabularies. A much compact definition of these assertions can be easily done by adding a bit of ontological alignment between the two ontologies and, then, inferring what is not explicitly asserted. For instance, if the following Manchester Syntax extension of ORE is considered:
+
+{{{
+Prefix: ore: <http://www.openarchives.org/ore/items/>
+Prefix: co:  <http://purl.org/co/>
+
+Class: ore:Aggregation
+    SubClassOf: co:Set
+
+ObjectProperty: ore:aggregates
+    SubPropertyOf: co:element
+}}}
+
+we can infer all the co:Set statements starting from the following ones:
+
+{{{
+@prefix ore: <http://www.openarchives.org/ore/items/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix :    <http://www.example.com/> .
+
+:myOwnBibliographicCollection a ore:Aggregation
+    ; ore:aggregates
           doi:10.1080/13614568.2010.497194 
         , doi:10.1016/j.jbi.2008.04.010 .
 }}}

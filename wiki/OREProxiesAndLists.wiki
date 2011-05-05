@@ -74,39 +74,47 @@ When we are writing a scientific paper, we use to refer to bibliographic referen
     ; ore:aggregates [ 
         a ore:Proxy 
             ; ore:proxyFor w3:owl2-syntax
-            ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax" ]
+            ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
+              Structural Specification and Functional-Style Syntax" ]
     ; ore:aggregates [ 
         a ore:Proxy 
             ; ore:proxyFor w3:rdf-concepts
-            ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF): Concepts and Abstract Syntax" ] .
+            ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
+              Concepts and Abstract Syntax" ] .
 
 :paperTwoBibligraphicReferenceCollection a ore:Aggregation
     ; ore:aggregates [ 
         a ore:Proxy
             ; ore:proxyFor w3:owl2-syntax
-            ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural - W3C Recommendation 27 October 2009" ]
+            ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
+              W3C Recommendation 27 October 2009" ]
     ; ore:aggregates [ 
         a ore:Proxy 
             ; ore:proxyFor w3:rdf-sparql-query
-            ; dcterms:bibliographicCitation "SPARQL Query Language for RDF - W3C Recommendation 15 January 2008" ] .
+            ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
+              W3C Recommendation 15 January 2008" ] .
 
 :paperOneBibligraphicReferenceCollection a co:Bag
     ; co:item [ 
         a co:Item  
             ; co:itemContent w3:owl2-syntax 
-            ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax" ]
+            ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
+              Structural Specification and Functional-Style Syntax" ]
     ; co:item [ 
         a co:Item  
             ; co:itemContent w3:rdf-concepts 
-            ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF): Concepts and Abstract Syntax" ] .
+            ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
+              Concepts and Abstract Syntax" ] .
 
 :paperTwoBibligraphicReferenceCollection a co:Bag
     ; co:item [  
         a co:Item  
             ; co:itemContent w3:owl2-syntax 
-            ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural - W3C Recommendation 27 October 2009" ]
+            ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
+              W3C Recommendation 27 October 2009" ]
     ; co:item [  
         a co:Item  
             ; co:itemContent w3:rdf-sparql-query 
-            ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural - W3C Recommendation 27 October 2009" ] .
+            ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
+              W3C Recommendation 27 October 2009" ] .
 }}}

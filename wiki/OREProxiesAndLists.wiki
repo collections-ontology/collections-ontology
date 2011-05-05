@@ -143,7 +143,7 @@ In this way, we can infer all the co:Bag statements starting from the following 
 
 {{{
 @prefix ore:     <http://www.openarchives.org/ore/items/> .
-@prefix w3:     <http://www.w3.org/TR/> .
+@prefix w3:      <http://www.w3.org/TR/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix :        <http://www.example.com/> .
 
@@ -161,13 +161,11 @@ In this way, we can infer all the co:Bag statements starting from the following 
 
 :paperTwoBibligraphicReferenceCollection a ore:Aggregation
     ; ore:aggregates [ 
-        a ore:Proxy
-            ; ore:proxyFor w3:owl2-syntax
-            ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
+        ; ore:proxyFor w3:owl2-syntax
+        ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
               W3C Recommendation 27 October 2009" ]
     ; ore:aggregates [ 
-        a ore:Proxy 
-            ; ore:proxyFor w3:rdf-sparql-query
-            ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
+        ; ore:proxyFor w3:rdf-sparql-query
+        ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
               W3C Recommendation 15 January 2008" ] .
 }}}

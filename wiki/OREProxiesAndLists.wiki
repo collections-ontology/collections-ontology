@@ -15,8 +15,8 @@ http://www.openarchives.org/ore/1.0/datamodel-images/Proxy.jpg
 
 All these scenarios can be easily integrated with CO.
 
-== Bibliographic collection as set of aggregated records ==
-Bibliographic collections, handled by particular software such as [http://www.mendeley.com Mendeley], are just set of aggregated bibliographic records. Usually, these collections are used by authors of articles and nooks to store and retrieve specific references they cite within their works.
+== Set of cited papers ==
+Our personal scientific library, composed by a large number of works, is actually an aggregation (and a set) of different papers. This scenario can be described in OWL through both ORE and CO as follows:
 
 {{{
 @prefix ore: <http://www.openarchives.org/ore/items/> .
@@ -24,12 +24,12 @@ Bibliographic collections, handled by particular software such as [http://www.me
 @prefix doi: <http://dx.doi.org/> .
 @prefix :    <http://www.example.com/> .
 
-:myOwnBibliographicCollection a ore:Aggregation
+:myOwnLibrary a ore:Aggregation
     ; ore:aggregates
           doi:10.1080/13614568.2010.497194 
         , doi:10.1016/j.jbi.2008.04.010 .
 
-:myOwnBibliographicCollection a co:Set
+:myOwnLibrary a co:Set
     ; co:element
           doi:10.1080/13614568.2010.497194 
         , doi:10.1016/j.jbi.2008.04.010 .
@@ -55,8 +55,20 @@ we can infer all the co:Set statements starting from the following ones:
 @prefix doi: <http://dx.doi.org/> .
 @prefix :    <http://www.example.com/> .
 
-:myOwnBibliographicCollection a ore:Aggregation
+:myOwnLibrary a ore:Aggregation
     ; ore:aggregates
           doi:10.1080/13614568.2010.497194 
         , doi:10.1016/j.jbi.2008.04.010 .
+}}}
+
+== Bibliographic references of papers as bag of aggregated contextual records ==
+When we are writing a scientific paper, we use to refer to bibliographic references, each of them referencing a precise paper, for explicitly citing other works in our paper. Of course, two bibliographic references, even when defined in two different papers and referring to the same work, can have associated particular (and contextual) metadata that change reference by reference. For example:
+
+{{{
+@prefix ore: <http://www.openarchives.org/ore/items/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix :    <http://www.example.com/> .
+
+:myOwnBibligraphicCollection a ore:Aggregation
+ .
 }}}

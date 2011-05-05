@@ -66,9 +66,22 @@ When we are writing a scientific paper, we use to refer to bibliographic referen
 
 {{{
 @prefix ore: <http://www.openarchives.org/ore/items/> .
-@prefix doi: <http://dx.doi.org/> .
+@prefix w3: <http://www.w3.org/TR/> .
 @prefix :    <http://www.example.com/> .
 
-:myOwnBibligraphicCollection a ore:Aggregation
- .
+:paperOneBibligraphicReferenceCollection a ore:Aggregation
+    ; ore:aggregates [ a ore:Proxy ; ore:proxyFor w3:owl2-syntax ]
+    ; ore:aggregates [ a ore:Proxy ; ore:proxyFor w3:rdf-concepts ] .
+
+:paperTwoBibligraphicReferenceCollection a ore:Aggregation
+    ; ore:aggregates [ a ore:Proxy ; ore:proxyFor w3:owl2-syntax ]
+    ; ore:aggregates [ a ore:Proxy ; ore:proxyFor w3:rdf-sparql-query ] .
+
+:paperOneBibligraphicReferenceCollection a co:Bag
+    ; ore:aggregates [ co:itemContent w3:owl2-syntax ]
+    ; ore:aggregates [ co:itemContent w3:rdf-concepts ] .
+
+:paperTwoBibligraphicReferenceCollection a co:Bag
+    ; co:item [ co:itemContent w3:owl2-syntax ]
+    ; co:item [ co:itemContent w3:rdf-sparql-query ] .
 }}}

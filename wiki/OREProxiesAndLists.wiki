@@ -42,7 +42,7 @@ Prefix: ore: <http://www.openarchives.org/ore/items/>
 Prefix: co:  <http://purl.org/co/>
 
 Class: ore:Aggregation
-    SubClassOf: co:Set
+    EquivalentTo: co:Set
 
 ObjectProperty: ore:aggregates
     EquivalentTo: co:element
@@ -71,72 +71,60 @@ When we are writing a scientific paper, we use to refer to bibliographic referen
 @prefix :        <http://www.example.com/> .
 
 :paperOneBibligraphicReferenceCollection a ore:Aggregation
-    ; ore:aggregates [ 
-        a ore:Proxy 
-            ; ore:proxyFor w3:owl2-syntax
-            ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
-              Structural Specification and Functional-Style Syntax" ]
-    ; ore:aggregates [ 
-        a ore:Proxy 
-            ; ore:proxyFor w3:rdf-concepts
-            ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
-              Concepts and Abstract Syntax" ] .
+    ; ore:aggregates w3:owl2-syntax , w3:rdf-concepts .
+
+:proxy1 a ore:Proxy 
+    ; ore:proxyIn :paperOneBibligraphicReferenceCollection
+    ; ore:proxyFor w3:owl2-syntax
+    ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
+      Structural Specification and Functional-Style Syntax" .
+
+:proxy2 a ore:Proxy 
+    ; ore:proxyIn :paperOneBibligraphicReferenceCollection
+    ; ore:proxyFor w3:rdf-concepts
+    ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
+      Concepts and Abstract Syntax" .
 
 :paperTwoBibligraphicReferenceCollection a ore:Aggregation
-    ; ore:aggregates [ 
-        a ore:Proxy
-            ; ore:proxyFor w3:owl2-syntax
-            ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
-              W3C Recommendation 27 October 2009" ]
-    ; ore:aggregates [ 
-        a ore:Proxy 
-            ; ore:proxyFor w3:rdf-sparql-query
-            ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
-              W3C Recommendation 15 January 2008" ] .
+    ; ore:aggregates w3:owl2-syntax , w3:rdf-sparql-query .
+
+:proxy3 a ore:Proxy
+    ; ore:proxyIn :paperTwoBibligraphicReferenceCollection
+    ; ore:proxyFor w3:owl2-syntax
+    ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
+      W3C Recommendation 27 October 2009" .
+
+:proxy3 a ore:Proxy 
+    ; ore:proxyIn :paperTwoBibligraphicReferenceCollection
+    ; ore:proxyFor w3:rdf-sparql-query
+    ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
+      W3C Recommendation 15 January 2008" .
 
 :paperOneBibligraphicReferenceCollection a co:Bag
-    ; co:item [ 
-        a co:Item  
-            ; co:itemContent w3:owl2-syntax 
-            ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
-              Structural Specification and Functional-Style Syntax" ]
-    ; co:item [ 
-        a co:Item  
-            ; co:itemContent w3:rdf-concepts 
-            ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
-              Concepts and Abstract Syntax" ] .
+    ; co:item :proxy1 , :proxy2 .
 
 :paperTwoBibligraphicReferenceCollection a co:Bag
-    ; co:item [  
-        a co:Item  
-            ; co:itemContent w3:owl2-syntax 
-            ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
-              W3C Recommendation 27 October 2009" ]
-    ; co:item [  
-        a co:Item  
-            ; co:itemContent w3:rdf-sparql-query 
-            ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
-              W3C Recommendation 15 January 2008" ] .
+    ; co:item :proxy3 , :proxy4 .
 }}}
 
-In the previous snippet both ore:Aggregation and co:Bag are used to describe two different bibliographic reference collections through two different vocabularies. A much compact definition of these assertions can be easily done by adding a bit of ontological alignment between the two ontologies and, then, inferring what is not explicitly asserted. For instance, modifying the previously-defined Manchester Syntax extension of ORE as follows:
+In the previous snippet both ore:Aggregation and co:Bag are used to describe two bibliographic reference collections through two different vocabularies. A much compact definition of these assertions can be easily done by adding a bit of ontological alignment between the two ontologies and, then, inferring what is not explicitly asserted. For instance, modifying the previously-defined Manchester Syntax extension of ORE as follows:
 
 {{{
 Prefix: ore: <http://www.openarchives.org/ore/items/>
 Prefix: co:  <http://purl.org/co/>
 
 Class: ore:Aggregation
-    SubClassOf: co:Set or 
+    EquivalentTo: co:Set or 
                 (co:Bag that co:item only ore:Proxy)
 
 ObjectProperty: ore:aggregates
     EquivalentTo: co:element
 
 ObjectProperty: ore:proxyIn
-    SubPropertyOf: co:itemOf
+    EquivalentTo: co:itemOf
 
 ObjectProperty: ore:proxyFor
-    SubPropertyOf: co:itemContent
+    EquivalentTo: co:itemContent
 }}}
 
 In this way, we can infer all the co:Bag statements starting from the following ones:
@@ -148,26 +136,22 @@ In this way, we can infer all the co:Bag statements starting from the following 
 @prefix :        <http://www.example.com/> .
 
 :paperOneBibligraphicReferenceCollection a ore:Aggregation
-    ; ore:aggregates [ 
-        a ore:Proxy 
-            ; ore:proxyFor w3:owl2-syntax
-            ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
-              Structural Specification and Functional-Style Syntax" ]
-    ; ore:aggregates [ 
-        a ore:Proxy 
-            ; ore:proxyFor w3:rdf-concepts
-            ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
-              Concepts and Abstract Syntax" ] .
+    ; co:item
+          [ ore:proxyFor w3:owl2-syntax
+              ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
+                Structural Specification and Functional-Style Syntax" ]
+        ,  [ ore:proxyFor w3:rdf-concepts
+              ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
+                Concepts and Abstract Syntax" ] .
 
 :paperTwoBibligraphicReferenceCollection a ore:Aggregation
-    ; ore:aggregates [ 
-        ; ore:proxyFor w3:owl2-syntax
-        ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
-              W3C Recommendation 27 October 2009" ]
-    ; ore:aggregates [ 
-        ; ore:proxyFor w3:rdf-sparql-query
-        ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
-              W3C Recommendation 15 January 2008" ] .
+    ; co:item 
+          [ ore:proxyFor w3:owl2-syntax
+              ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
+                W3C Recommendation 27 October 2009" ]
+        , [ ore:proxyFor w3:rdf-sparql-query
+              ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
+                W3C Recommendation 15 January 2008" ] .
 }}}
 
 == Then, order it: bibliographic reference lists ==
@@ -211,18 +195,18 @@ Prefix: ore: <http://www.openarchives.org/ore/items/>
 Prefix: co:  <http://purl.org/co/>
 
 Class: ore:Aggregation
-    SubClassOf: co:Set or 
+    EquivalentTo: co:Set or 
                 (co:Bag that co:item only ore:Proxy) or
                 (co:List that co:item only ore:Proxy)
 
 ObjectProperty: ore:aggregates
-    SubPropertyOf: co:element
+    EquivalentTo: co:element
 
 ObjectProperty: ore:proxyIn
-    SubPropertyOf: co:itemOf
+    EquivalentTo: co:itemOf
 
 ObjectProperty: ore:proxyFor
-    SubPropertyOf: co:itemContent
+    EquivalentTo: co:itemContent
 }}}
 
 In this way, we can infer the remaining statements starting from the following ones:

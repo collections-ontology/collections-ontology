@@ -1,8 +1,8 @@
 #summary Handling ORE proxies with co:List
 
-= co:List for ORE proxies =
-
 == The ORE specification and its features ==
 The [http://www.openarchives.org/ore/1.0/datamodel Open Reuse and Exchange specification] (ORE specification) is a standard defined by the [http://www.openarchives.org/ Open Archives Initiative] for describing and exchanging aggregations of Web resources.
 
-The main concept of this specification is the _Aggregation_, i.e., a particular resource that logically or physically aggregates other resources
+The main concept of this specification is the _Aggregation_, i.e., a particular resource that aggregates, either logically or physically, other resources, as shown in the following figure:
+
+http://www.openarchives.org/ore/1.0/datamodel-images/ReMAggregates.jpg

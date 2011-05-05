@@ -234,26 +234,10 @@ In this way, we can infer the remaining statements starting from the following o
 @prefix :        <http://www.example.com/> .
 
 :paperOneBibliographicReferenceCollection a ore:Aggregation
-    ; co:item
-        [ a ore:Proxy 
-            ; ore:proxyFor w3:owl2-syntax
-            ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
-              Structural Specification and Functional-Style Syntax" 
-            ; co:nextItem
-
-:proxy2 a ore:Proxy 
-    ; ore:proxyFor w3:rdf-concepts
-    ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
-      Concepts and Abstract Syntax" ] ] .
-
-:paperOneBibliographicReferenceCollection a co:List
-    ; co:firstItem :proxy1
-    ; co:lastItem : proxy2 .
-
-:proxy1 a co:ListItem
-    ; co:nextItem :proxy2
-    ; co:itemContent w3:owl2-syntax .
-
-:proxy2 a co:ListItem
-    ; co:itemContent w3:rdf-concepts .
+    ; co:firstItem [ ore:proxyFor w3:owl2-syntax
+        ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
+          Structural Specification and Functional-Style Syntax" 
+        ; co:nextItem[ ore:proxyFor w3:rdf-concepts
+            ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
+              Concepts and Abstract Syntax" ] ] .
 }}}

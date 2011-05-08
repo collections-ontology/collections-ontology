@@ -4,12 +4,13 @@
 
 Collections Ontology (CO) is an OWL ontology currently representing three different data structures: 
  * [CollectionsOntologyDataStructures Set, Bag], [StructureList List].
- * Alignments 
-   * [OREProxiesAndLists Handling ORE proxies with CO]
- * Examples 
-   * [SetExample1 Defining the Set of the CO contributors]
-   * [SetsExample1AndFoafGroup Collections Ontology and FOAF Group] 
-   * [ListExamplePaperAuthorsFaBiO Defining a list of authors of a paper in FaBiO using CO]
+
+Alignments 
+ * [OREProxiesAndLists Handling ORE proxies with CO]
+Examples 
+ * [SetExample1 Defining the Set of the CO contributors]
+ * [SetsExample1AndFoafGroup Collections Ontology and FOAF Group] 
+ * [ListExamplePaperAuthorsFaBiO Defining a list of authors of a paper in FaBiO using CO]
 
 If you are interested in better understanding the reasons behind the creation of the Collections Ontology we would suggest starting reading the following pages:   
  # [RDFContainersAndCollections RDF Containers and Collections]  

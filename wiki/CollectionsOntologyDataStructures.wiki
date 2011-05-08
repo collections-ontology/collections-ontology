@@ -20,7 +20,7 @@ ObjectProperty: co:element
 }}}
 
 == List ==
-A *List* is a collection that can have multiple copies of each element. This is performed through the _co:Item_ entity. The _co:ListItem_ is linking exactly one resource through the relationship _co:itemContent_.
+A *List* is a collection that can have multiple copies of each element. This is performed through the _co:ListItem_ entity. The _co:ListItem_ is linking exactly one resource through the relationship _co:itemContent_.
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-List.png]<br/>
 *Figure 3: A List represented with Collections Ontology*

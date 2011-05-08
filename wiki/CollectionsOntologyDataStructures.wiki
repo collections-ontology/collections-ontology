@@ -4,13 +4,13 @@
 A *Set* is a collection that cannot contain duplicate elements. All the elements of the set are directly linked to it through the property _co:element_. In RDF, identical elements connected by the same property are, by default, treated as a set.
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-Set.png]<br/>
-*Figure 1: How a Set is represented with Collections Ontology*
+*Figure 1: A Set represented with Collections Ontology*
 
 == Bag ==
 A *Bag* is a collection that can have multiple copies of each element. This is performed through the _co:Item_ entity. The _co:Item_ is linking exactly one resource through the relationship _co:itemResource_.
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-Bag.png]<br/>
-*Figure 2: How a Bag is represented with Collections Ontology*
+*Figure 2: A Bag represented with Collections Ontology*
 
 In the v2.0 of Collections Ontology, thanks to the new [http://www.w3.org/TR/2009/PR-owl2-overview-20090922/ OWL2] feature named [http://www.w3.org/TR/owl2-primer/#Property_Chains Property Chains], it has been possible to infer automatically the belongingness to a bag, i.e., all the _co:element_ relations between a bag instance and all the other objects it effectively contains, that are de-referenced through items and the related properties _co:item_ and _co:itemContent_ for allowing repetition. This inference mechanisms is implemented through the following assertion:
 
@@ -22,4 +22,4 @@ ObjectProperty: co:element
 == List ==
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-List.png]<br/>
-*Figure 3: How a List is represented with Collections Ontology*
+*Figure 3: A List represented with Collections Ontology*

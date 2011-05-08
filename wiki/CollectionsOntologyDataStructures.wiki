@@ -20,3 +20,6 @@ ObjectProperty: co:element
 }}}
 
 == List ==
+
+[http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-List.png]<br/>
+*Figure 3: How a List is represented with Collections Ontology*

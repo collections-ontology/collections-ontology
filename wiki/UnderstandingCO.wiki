@@ -4,7 +4,7 @@
 
 Collections Ontology (CO) is an OWL ontology currently representing three different data structures: 
  * [CollectionsOntologyDataStructures Set, Bag]
- * [StructureList List] or Sequence implements an ordered collection of elements, where the same element may occur more than once ([StructureList learn more])
+ * *[StructureList List] or Sequence* implements an ordered collection of elements, where the same element may occur more than once ([StructureList learn more])
 
 Alignments with other efforts:
  * [OREProxiesAndLists Handling ORE proxies with CO]

@@ -3,7 +3,8 @@
 == Understanding Collections Ontology (CO) ==
 
 Collections Ontology (CO) is an OWL ontology currently representing three different data structures: 
- * [CollectionsOntologyDataStructures Set, Bag], [StructureList List].
+ * [CollectionsOntologyDataStructures Set, Bag]
+ * [StructureList List]
 
 Alignments with other efforts:
  * [OREProxiesAndLists Handling ORE proxies with CO]

@@ -178,7 +178,7 @@ With this approach, if we introduce a second group with a different URI, we can 
 ...
 }}}
 
-====Approach #3: using inference====
+====Note: an erroneous way of leveraging inference====
 
 {{{
 # Snippet 6

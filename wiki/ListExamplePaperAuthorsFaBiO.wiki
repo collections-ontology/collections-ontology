@@ -4,7 +4,7 @@
 A simple representation of the authors of a conference paper using the <a href="http://purl.org/spar/fabio" title="FRBR-aligned Bibliographic Ontology">FaBiO</a> and <a href="http://xmlns.com/foaf/0.1" title="Friend Of A Friend">FOAF</a>.
 
 {{{
-# Snipped 1
+# Snippet 1
 
 @prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dc:		<http://purl.org/dc/elements/1.1/#>.
@@ -29,7 +29,7 @@ A simple representation of the authors of a conference paper using the <a href="
 How can I specify the order among authors as they appears on the paper head? With CO, it is possible to create a list to put people, that are authors of the paper, in a specific order.
 
 {{{
-# Snipped 2
+# Snippet 2
 
 @prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dc:		<http://purl.org/dc/elements/1.1/#>.
@@ -70,7 +70,7 @@ The previous example, in which it is shown how to create ordered list of people 
 In this way, we did not define any link between the function of being an author and the position of a person within the paper-related list of authors. The following example shows how to create this link.
 
 {{{
-# Snipped 3
+# Snippet 3
 
 @prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    	<http://www.w3.org/2000/01/rdf-schema#> .

@@ -4,7 +4,7 @@
 If you are a FOAF user, you might want to define the contributors to Collections Ontology as a FOAF (Friend Of A Friend) _Group_. Without Collections Ontology this would look something like:
 
 {{{
-# Snippet 3
+# Snippet 1
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
@@ -49,7 +49,7 @@ The above example could be enough if your application is reacting to FOAF. Howev
 One possible approach consists in declaring a _FOAF:Group_ to be, at the same time, a _CO:Set_.
 
 {{{
-# Snippet 4
+# Snippet 2
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
@@ -108,7 +108,7 @@ In other words, we have a case of same set of members but still different groups
 An alternative to the above approach, is to model _FOAF:Group_ and _CO:Set_ separately so that two different groups link the same set of members.
 
 {{{
-# Snippet 5
+# Snippet 3
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
@@ -162,7 +162,7 @@ An alternative to the above approach, is to model _FOAF:Group_ and _CO:Set_ sepa
 With this approach, if we introduce a second group with a different URI, we can still refer to the very same set of members.
 
 {{{
-# Snippet 6
+# Snippet 4
 
 ...
 <http://purl.org/co/example/1/group/2>
@@ -181,7 +181,7 @@ With this approach, if we introduce a second group with a different URI, we can 
 ===An erroneous way of leveraging inference===
 
 {{{
-# Snippet 7
+# Snippet 5
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.

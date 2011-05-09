@@ -25,7 +25,7 @@ A simple representation of the authors of a conference paper using the <a href="
 :a7 a foaf:Person ; foaf:givenName "Julian" ; foaf:familyName "Seidenberg" .
 }}}
 
-=== Expressing orther among authors ===
+=== Expressing order among authors ===
 How can I specify the order among authors as they appears on the paper head? With CO, it is possible to create a list to put people, that are authors of the paper, in a specific order.
 
 {{{

@@ -116,7 +116,7 @@ In this way, we did not define any link between the function of being an author 
 :a7 a foaf:Person ; foaf:givenName "Julian" ; foaf:familyName "Seidenberg" .
 }}}
 
-=== Inferences ===
+=== Leveraging inference ===
 By means of CO inference capabilities, it is possible to make a list in a less verbose way, leaving to infer all the others list-to-item and item-to-item links to a reasoner. In fact, the list presented in the previous example can be re-written as follows:
 
 {{{

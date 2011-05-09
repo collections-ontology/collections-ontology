@@ -162,7 +162,7 @@ An alternative to the above approach, is to model _FOAF:Group_ and _CO:Set_ sepa
 With this approach, if we introduce a second group with a different URI, we can still refer to the very same set of members.
 
 {{{
-# Snippet 7
+# Snippet 6
 
 ...
 <http://purl.org/co/example/1/group/2>
@@ -181,7 +181,7 @@ With this approach, if we introduce a second group with a different URI, we can 
 ===An erroneous way of leveraging inference===
 
 {{{
-# Snippet 6
+# Snippet 7
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.

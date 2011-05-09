@@ -179,8 +179,9 @@ With this approach, if we introduce a second group with a different URI, we can 
 }}}
 
 ===An erroneous way of leveraging inference===
-For some, it might be immediate to define some assertions (snippet 5) in order to treat the _foaf:Group_ as a _co:Set_ without altering the original code nor introducing redundancies. This approach might look attractive at first glance however it is not desirable. In fact, 
-mathematically speaking a set is identified by the collections of its items. Therefore, if I define a second group named 'The golf buddies' with the very same members of the group 'Collections Ontology Contributors', we will end up having two different groups with the same set of people.
+For some, it might be immediate to define some assertions (snippet 5) in order to treat the _foaf:Group_ as a _co:Set_ without altering the original code nor introducing redundancies. This approach might look attractive at first glance however it is not desirable. 
+
+Mathematically speaking a set is identified by the collections of its items. Therefore, if I define a second group named 'The golf buddies' with the very same members of the group 'Collections Ontology Contributors', we will end up having two different groups with the same set of people. Therefore it is desirable to keep groups and sets as separate entities.
 
 {{{
 # Snippet 5

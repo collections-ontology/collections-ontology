@@ -10,3 +10,5 @@ A *List* or Sequence is an abstract data structure that implements an ordered co
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-List-with-inverse.png]<br/>
 *Figure 2: Representation of a List with Collections Ontology. It includes the inverse properties.*
+
+=== Drive Through ===

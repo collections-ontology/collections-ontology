@@ -4,7 +4,7 @@
 
 Collections Ontology (CO) is an OWL ontology currently representing three different data structures: 
  * *[StructureSet Set]* implements a collection that cannot contain duplicate elements ([StructureSet learn more])
- * *[CollectionsOntologyDataStructures Bag]* implements a collection that can have multiple copies of each element ([CollectionsOntologyDataStructures learn more])
+ * *[StructureBag Bag]* implements a collection that can have multiple copies of each element ([StructureBag learn more])
  * *[StructureList List]* (or Sequence) implements an ordered collection of elements, where the same element may occur more than once ([StructureList learn more])
 
 Alignments with other efforts:

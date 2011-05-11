@@ -1,6 +1,8 @@
 #summary List in Collections Ontology
 
 == List ==
+
+=== Introduction ===
 A *List* or Sequence is an abstract data structure that implements an ordered collection of elements, where the same element may occur more than once. This is performed through the _co:ListItem_ entity. The _co:ListItem_ is linking exactly one resource through the relationship _co:itemContent_.
 
 [http://collections-ontology.googlecode.com/svn/trunk/images/Collections-Ontology-List.png]<br/>

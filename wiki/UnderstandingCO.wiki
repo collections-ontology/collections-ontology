@@ -6,6 +6,7 @@ Collections Ontology (CO) is an OWL ontology currently representing three differ
  * *[StructureSet Set]* implements a collection that cannot contain duplicate elements 
    * Introduction to the [StructureSet co:Set]
    * Set Example #1: [SetExample1 Defining the Set of the CO contributors]
+   * Set Example #2: [SetsExample1AndFoafGroup Collections Ontology and FOAF Group]
  * *[StructureBag Bag]* implements a collection that can have multiple copies of each element ([StructureBag learn more])
    * Introduction to the [StructureBag co:Bag]
  * *[StructureList List]* (or Sequence) implements an ordered collection of elements, where the same element may occur more than once
@@ -13,8 +14,7 @@ Collections Ontology (CO) is an OWL ontology currently representing three differ
 
 Alignments with other efforts:
  * [OREProxiesAndLists Handling ORE proxies with CO]
-Examples:
- * [SetsExample1AndFoafGroup Collections Ontology and FOAF Group] 
+Examples: 
  * [ListExamplePaperAuthorsFaBiO Defining a list of authors of a paper in FaBiO using CO]
 
 If you are interested in better understanding the reasons behind the creation of the Collections Ontology we would suggest starting reading the following pages:   

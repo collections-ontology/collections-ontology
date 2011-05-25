@@ -28,7 +28,7 @@
     <owl:Ontology rdf:about="http://purl.org/co">
         <owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
-        <dc:date rdf:datatype="&xsd;string">May 23, 2011</dc:date>
+        <dc:date rdf:datatype="&xsd;string">May 25, 2011</dc:date>
         <dc:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Silvio Peroni</dc:contributor>
         <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
@@ -286,10 +286,10 @@
     
 
 
-    <!-- http://purl.org/co/rank -->
+    <!-- http://purl.org/co/index -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/co/rank">
-        <rdfs:label xml:lang="en">has rank</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://purl.org/co/index">
+        <rdfs:label xml:lang="en">has index</rdfs:label>
         <rdfs:comment xml:lang="en">A number identifying the position, starting from 1, of a particular list item within a list.</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/co/ListItem"/>
         <rdfs:range rdf:resource="&xsd;positiveInteger"/>
@@ -372,12 +372,6 @@
     <owl:Class rdf:about="http://purl.org/co/List">
         <rdfs:label xml:lang="en">list</rdfs:label>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/co/lastItem"/>
-                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/co/Bag"/>
@@ -394,6 +388,12 @@
                 <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/co/lastItem"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An ordered array of items, that can be present in multiple copies</rdfs:comment>
     </owl:Class>
     
@@ -406,7 +406,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/co/Item"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/co/rank"/>
+                <owl:onProperty rdf:resource="http://purl.org/co/index"/>
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -474,26 +474,139 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <swrl:Variable rdf:about="urn:swrl#current"/>
-    <swrl:Variable rdf:about="urn:swrl#next"/>
-    <swrl:Variable rdf:about="urn:swrl#r"/>
-    <swrl:Variable rdf:about="urn:swrl#nextR"/>
-    <swrl:Variable rdf:about="urn:swrl#list"/>
-    <swrl:Variable rdf:about="urn:swrl#last"/>
-    <swrl:Variable rdf:about="urn:swrl#first"/>
     <swrl:Variable rdf:about="urn:swrl#li1"/>
     <swrl:Variable rdf:about="urn:swrl#l"/>
     <swrl:Variable rdf:about="urn:swrl#li2"/>
     <swrl:Variable rdf:about="urn:swrl#r1"/>
     <swrl:Variable rdf:about="urn:swrl#r2"/>
+    <swrl:Variable rdf:about="urn:swrl#current"/>
+    <swrl:Variable rdf:about="urn:swrl#next"/>
+    <swrl:Variable rdf:about="urn:swrl#r"/>
+    <swrl:Variable rdf:about="urn:swrl#nextR"/>
+    <swrl:Variable rdf:about="urn:swrl#list"/>
+    <swrl:Variable rdf:about="urn:swrl#first"/>
     <swrl:Variable rdf:about="urn:swrl#x"/>
+    <swrl:Variable rdf:about="urn:swrl#last"/>
     <swrl:Imp>
         <swrl:head>
             <swrl:AtomList>
                 <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <swrl:DatavaluedPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/rank"/>
+                        <swrl:argument2 rdf:datatype="&xsd;integer">1</swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/index"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#first"/>
+                    </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/firstItem"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#first"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#list"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/nextItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#li1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#li2"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/co/itemOf"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#l"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#li2"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:first>
+                                    <swrl:DatavaluedPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/index"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#li1"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#r1"/>
+                                    </swrl:DatavaluedPropertyAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <swrl:AtomList>
+                                        <rdf:first>
+                                            <swrl:DatavaluedPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="http://purl.org/co/index"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#li2"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#r2"/>
+                                            </swrl:DatavaluedPropertyAtom>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <swrl:AtomList>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <swrl:BuiltinAtom>
+                                                        <swrl:builtin rdf:resource="&swrlb;add"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:resource="urn:swrl#r2"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:resource="urn:swrl#r1"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;integer">1</rdf:first>
+                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </swrl:BuiltinAtom>
+                                                </rdf:first>
+                                            </swrl:AtomList>
+                                        </rdf:rest>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/itemOf"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#l"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#li1"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/index"/>
                         <swrl:argument1 rdf:resource="urn:swrl#next"/>
                         <swrl:argument2 rdf:resource="urn:swrl#nextR"/>
                     </swrl:DatavaluedPropertyAtom>
@@ -504,13 +617,6 @@
             <swrl:AtomList>
                 <rdf:rest>
                     <swrl:AtomList>
-                        <rdf:first>
-                            <swrl:DatavaluedPropertyAtom>
-                                <swrl:propertyPredicate rdf:resource="http://purl.org/co/rank"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#current"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#r"/>
-                            </swrl:DatavaluedPropertyAtom>
-                        </rdf:first>
                         <rdf:rest>
                             <swrl:AtomList>
                                 <rdf:rest rdf:resource="&rdf;nil"/>
@@ -540,6 +646,13 @@
                                 </rdf:first>
                             </swrl:AtomList>
                         </rdf:rest>
+                        <rdf:first>
+                            <swrl:DatavaluedPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/co/index"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#current"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#r"/>
+                            </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
                     </swrl:AtomList>
                 </rdf:rest>
                 <rdf:first>
@@ -547,6 +660,32 @@
                         <swrl:propertyPredicate rdf:resource="http://purl.org/co/nextItem"/>
                         <swrl:argument1 rdf:resource="urn:swrl#current"/>
                         <swrl:argument2 rdf:resource="urn:swrl#next"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument2>A list item cannot be followed by itself</swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="&error;hasError"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/followedBy"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
                     </swrl:IndividualPropertyAtom>
                 </rdf:first>
             </swrl:AtomList>
@@ -579,119 +718,6 @@
         </swrl:head>
     </swrl:Imp>
     <swrl:Imp>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/firstItem"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#first"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#list"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:body>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:DatavaluedPropertyAtom>
-                        <swrl:argument2 rdf:datatype="&xsd;integer">1</swrl:argument2>
-                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/rank"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#first"/>
-                    </swrl:DatavaluedPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
-    </swrl:Imp>
-    <swrl:Imp>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/nextItem"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#li1"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#li2"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:rest>
-                    <swrl:AtomList>
-                        <rdf:first>
-                            <swrl:IndividualPropertyAtom>
-                                <swrl:propertyPredicate rdf:resource="http://purl.org/co/itemOf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#l"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#li2"/>
-                            </swrl:IndividualPropertyAtom>
-                        </rdf:first>
-                        <rdf:rest>
-                            <swrl:AtomList>
-                                <rdf:rest>
-                                    <swrl:AtomList>
-                                        <rdf:rest>
-                                            <swrl:AtomList>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                <rdf:first>
-                                                    <swrl:BuiltinAtom>
-                                                        <swrl:builtin rdf:resource="&swrlb;add"/>
-                                                        <swrl:arguments>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="&rdf;List"/>
-                                                                <rdf:first rdf:resource="urn:swrl#r2"/>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="&rdf;List"/>
-                                                                        <rdf:first rdf:resource="urn:swrl#r1"/>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="&rdf;List"/>
-                                                                                <rdf:first rdf:datatype="&xsd;integer">1</rdf:first>
-                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </swrl:arguments>
-                                                    </swrl:BuiltinAtom>
-                                                </rdf:first>
-                                            </swrl:AtomList>
-                                        </rdf:rest>
-                                        <rdf:first>
-                                            <swrl:DatavaluedPropertyAtom>
-                                                <swrl:propertyPredicate rdf:resource="http://purl.org/co/rank"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#li2"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#r2"/>
-                                            </swrl:DatavaluedPropertyAtom>
-                                        </rdf:first>
-                                    </swrl:AtomList>
-                                </rdf:rest>
-                                <rdf:first>
-                                    <swrl:DatavaluedPropertyAtom>
-                                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/rank"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#li1"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#r1"/>
-                                    </swrl:DatavaluedPropertyAtom>
-                                </rdf:first>
-                            </swrl:AtomList>
-                        </rdf:rest>
-                    </swrl:AtomList>
-                </rdf:rest>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/itemOf"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#l"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#li1"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:body>
-    </swrl:Imp>
-    <swrl:Imp>
         <swrl:head>
             <swrl:AtomList>
                 <rdf:rest rdf:resource="&rdf;nil"/>
@@ -706,18 +732,6 @@
         </swrl:head>
         <swrl:body>
             <swrl:AtomList>
-                <rdf:rest>
-                    <swrl:AtomList>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <swrl:DatavaluedPropertyAtom>
-                                <swrl:propertyPredicate rdf:resource="http://purl.org/co/rank"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#last"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#r"/>
-                            </swrl:DatavaluedPropertyAtom>
-                        </rdf:first>
-                    </swrl:AtomList>
-                </rdf:rest>
                 <rdf:first>
                     <swrl:IndividualPropertyAtom>
                         <swrl:propertyPredicate rdf:resource="http://purl.org/co/lastItem"/>
@@ -725,32 +739,18 @@
                         <swrl:argument1 rdf:resource="urn:swrl#list"/>
                     </swrl:IndividualPropertyAtom>
                 </rdf:first>
-            </swrl:AtomList>
-        </swrl:body>
-    </swrl:Imp>
-    <swrl:Imp>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:DatavaluedPropertyAtom>
-                        <swrl:argument2>A list item cannot be followed by itself</swrl:argument2>
-                        <swrl:propertyPredicate rdf:resource="&error;hasError"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                    </swrl:DatavaluedPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="http://purl.org/co/followedBy"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <swrl:DatavaluedPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/co/index"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#last"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#r"/>
+                            </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
             </swrl:AtomList>
         </swrl:body>
     </swrl:Imp>

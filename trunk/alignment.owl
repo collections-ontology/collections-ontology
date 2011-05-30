@@ -1,0 +1,613 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY co "http://purl.org/co/" >
+    <!ENTITY mo "http://purl.org/ontology/mo/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ore "http://www.openarchives.org/ore/items/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY set "http://www.ontologydesignpatterns.org/cp/owl/set.owl#" >
+    <!ENTITY bag "http://www.ontologydesignpatterns.org/cp/owl/bag.owl#" >
+    <!ENTITY list "http://www.ontologydesignpatterns.org/cp/owl/list.owl#" >
+    <!ENTITY sequence "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#" >
+    <!ENTITY oldco "http://swan.mindinformatics.org/ontologies/1.2/collections/" >
+    <!ENTITY collectionentity "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&co;alignment/"
+     xml:base="&co;alignment/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:mo="http://purl.org/ontology/mo/"
+     xmlns:bag="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#"
+     xmlns:set="http://www.ontologydesignpatterns.org/cp/owl/set.owl#"
+     xmlns:list="http://www.ontologydesignpatterns.org/cp/owl/list.owl#"
+     xmlns:ore="http://www.openarchives.org/ore/items/"
+     xmlns:oldco="http://swan.mindinformatics.org/ontologies/1.2/collections/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:co="http://purl.org/co/"
+     xmlns:sequence="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:collectionentity="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#">
+    <owl:Ontology rdf:about="&co;alignment">
+        <dc:title xml:lang="en">Alignments between CO and other models</dc:title>
+        <dc:date xml:lang="en">May 30, 2011</dc:date>
+        <dc:creator xml:lang="en">Paolo Ciccarese</dc:creator>
+        <dc:creator xml:lang="en">Silvio Peroni</dc:creator>
+        <dc:description xml:lang="en">The Collection Ontology (CO, available at http://purl.org/co) is a model to define and reason upon ordered and unordered collections of entities in OWL 2 DL. This model defines an alignment between CO and other models that are ore use to behave like collections.
+
+Aligned models provided:
+- Collections Ontology, that is the old version of CO (http://swan.mindinformatics.org/spec/1.2/collections.html)
+- Collection entity (http://ontologydesignpatterns.org/wiki/Submissions:CollectionEntity)
+- Sequence (http://ontologydesignpatterns.org/wiki/Submissions:Sequence)
+- Set (http://ontologydesignpatterns.org/wiki/Submissions:Set)
+- Bag (http://ontologydesignpatterns.org/wiki/Submissions:Bag)
+- List (http://ontologydesignpatterns.org/wiki/Submissions:List)
+- Music ontology (http://musicontology.com/)
+- ORE Specification - Abstract Data Model (http://www.openarchives.org/ore/1.0/datamodel)</dc:description>
+        <rdfs:comment xml:lang="en">This ontology offers a alignment between the Collection Ontology (available at http://purl.org/co) and other models that are or use to behave like collections.</rdfs:comment>
+        <owl:imports rdf:resource="http://purl.org/co"/>
+        <owl:imports rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/collections.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/set.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/co/followedBy -->
+
+    <rdf:Description rdf:about="&co;followedBy">
+        <owl:equivalentProperty rdf:resource="&oldco;followedBy"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/co/itemContent -->
+
+    <rdf:Description rdf:about="&co;itemContent">
+        <owl:equivalentProperty rdf:resource="&oldco;itemContent"/>
+        <owl:equivalentProperty rdf:resource="&bag;itemContent"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/co/nextItem -->
+
+    <rdf:Description rdf:about="&co;nextItem">
+        <owl:equivalentProperty rdf:resource="&oldco;nextItem"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/co/precededBy -->
+
+    <rdf:Description rdf:about="&co;precededBy">
+        <owl:equivalentProperty rdf:resource="&oldco;preceededBy"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/co/previousItem -->
+
+    <rdf:Description rdf:about="&co;previousItem">
+        <owl:equivalentProperty rdf:resource="&oldco;previousItem"/>
+        <rdfs:subPropertyOf rdf:resource="&sequence;directlyFollows"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ontology/mo/publication_of -->
+
+    <owl:ObjectProperty rdf:about="&mo;publication_of">
+        <rdfs:label xml:lang="en">is publication of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&co;itemContent"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+        <owl:inverseOf rdf:resource="&mo;published_as"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/mo/published_as -->
+
+    <owl:ObjectProperty rdf:about="&mo;published_as">
+        <rdfs:label xml:lang="en">is published as</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&co;itemContentOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/mo/track -->
+
+    <owl:ObjectProperty rdf:about="&mo;track">
+        <rdfs:label xml:lang="en">has track</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&co;item"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+        <rdfs:domain rdf:resource="&mo;Record"/>
+        <rdfs:range rdf:resource="&mo;Track"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/element -->
+
+    <rdf:Description rdf:about="&oldco;element">
+        <rdfs:subPropertyOf rdf:resource="&co;element"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/firstItem -->
+
+    <rdf:Description rdf:about="&oldco;firstItem">
+        <rdfs:subPropertyOf rdf:resource="&co;firstItem"/>
+        <owl:equivalentProperty rdf:resource="&list;hasFirstItem"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/followedBy -->
+
+    <rdf:Description rdf:about="&oldco;followedBy">
+        <rdfs:subPropertyOf rdf:resource="&sequence;precedes"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/item -->
+
+    <rdf:Description rdf:about="&oldco;item">
+        <rdfs:subPropertyOf rdf:resource="&co;item"/>
+        <owl:equivalentProperty rdf:resource="&bag;hasItem"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/itemContent -->
+
+    <rdf:Description rdf:about="&oldco;itemContent"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/lastItem -->
+
+    <rdf:Description rdf:about="&oldco;lastItem">
+        <rdfs:subPropertyOf rdf:resource="&co;lastItem"/>
+        <owl:equivalentProperty rdf:resource="&list;hasLastItem"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/nextItem -->
+
+    <rdf:Description rdf:about="&oldco;nextItem">
+        <rdfs:subPropertyOf rdf:resource="&sequence;directlyPrecedes"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/preceededBy -->
+
+    <rdf:Description rdf:about="&oldco;preceededBy">
+        <rdfs:subPropertyOf rdf:resource="&sequence;follows"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/previousItem -->
+
+    <rdf:Description rdf:about="&oldco;previousItem"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem -->
+
+    <rdf:Description rdf:about="&bag;hasItem"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent -->
+
+    <rdf:Description rdf:about="&bag;itemContent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf -->
+
+    <rdf:Description rdf:about="&bag;itemOf">
+        <rdfs:subPropertyOf rdf:resource="&co;itemOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember -->
+
+    <rdf:Description rdf:about="&collectionentity;hasMember">
+        <rdfs:subPropertyOf rdf:resource="&co;element"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf -->
+
+    <rdf:Description rdf:about="&collectionentity;isMemberOf">
+        <rdfs:subPropertyOf rdf:resource="&co;elementOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#firstItemOf -->
+
+    <rdf:Description rdf:about="&list;firstItemOf">
+        <rdfs:subPropertyOf rdf:resource="&co;firstItemOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasFirstItem -->
+
+    <rdf:Description rdf:about="&list;hasFirstItem"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasLastItem -->
+
+    <rdf:Description rdf:about="&list;hasLastItem"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#lastItemOf -->
+
+    <rdf:Description rdf:about="&list;lastItemOf">
+        <rdfs:subPropertyOf rdf:resource="&co;lastItemOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.openarchives.org/ore/items/aggregates -->
+
+    <owl:ObjectProperty rdf:about="&ore;aggregates">
+        <rdfs:label xml:lang="en">aggregates</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&co;element"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.openarchives.org/ore/items/"/>
+        <rdfs:domain rdf:resource="&ore;Aggregation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openarchives.org/ore/items/proxyFor -->
+
+    <owl:ObjectProperty rdf:about="&ore;proxyFor">
+        <rdfs:label xml:lang="en">proxy for</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&co;itemContent"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.openarchives.org/ore/items/"/>
+        <rdfs:domain rdf:resource="&ore;Proxy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openarchives.org/ore/items/proxyIn -->
+
+    <owl:ObjectProperty rdf:about="&ore;proxyIn">
+        <rdfs:label xml:lang="en">proxy in</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&co;itemOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.openarchives.org/ore/items/"/>
+        <rdfs:range rdf:resource="&ore;Aggregation"/>
+        <rdfs:domain rdf:resource="&ore;Proxy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/co/size -->
+
+    <rdf:Description rdf:about="&co;size">
+        <owl:equivalentProperty rdf:resource="&oldco;size"/>
+        <owl:equivalentProperty rdf:resource="&bag;size"/>
+        <owl:equivalentProperty rdf:resource="&set;size"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ontology/mo/track_count -->
+
+    <owl:DatatypeProperty rdf:about="&mo;track_count">
+        <rdfs:label xml:lang="en">track count</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&co;size"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+        <rdfs:domain rdf:resource="&mo;Record"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/mo/track_number -->
+
+    <owl:DatatypeProperty rdf:about="&mo;track_number">
+        <rdfs:label xml:lang="en">track number</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&co;index"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/size -->
+
+    <rdf:Description rdf:about="&oldco;size"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#size -->
+
+    <rdf:Description rdf:about="&bag;size">
+        <owl:equivalentProperty rdf:resource="&set;size"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/set.owl#size -->
+
+    <rdf:Description rdf:about="&set;size"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/co/Bag -->
+
+    <rdf:Description rdf:about="&co;Bag">
+        <owl:equivalentClass rdf:resource="&oldco;Bag"/>
+        <owl:equivalentClass rdf:resource="&bag;Bag"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/co/Collection -->
+
+    <rdf:Description rdf:about="&co;Collection">
+        <owl:equivalentClass rdf:resource="&oldco;Collection"/>
+        <owl:equivalentClass rdf:resource="&collectionentity;Collection"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/co/Item -->
+
+    <rdf:Description rdf:about="&co;Item">
+        <owl:equivalentClass rdf:resource="&oldco;Item"/>
+        <owl:equivalentClass rdf:resource="&bag;Item"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/co/List -->
+
+    <rdf:Description rdf:about="&co;List">
+        <owl:equivalentClass rdf:resource="&oldco;List"/>
+        <owl:equivalentClass rdf:resource="&list;List"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/co/ListItem -->
+
+    <rdf:Description rdf:about="&co;ListItem">
+        <owl:equivalentClass rdf:resource="&oldco;ListItem"/>
+        <owl:equivalentClass rdf:resource="&list;ListItem"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/co/Set -->
+
+    <rdf:Description rdf:about="&co;Set">
+        <owl:equivalentClass rdf:resource="&oldco;Set"/>
+        <owl:equivalentClass rdf:resource="&set;Set"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Record -->
+
+    <owl:Class rdf:about="&mo;Record">
+        <rdfs:label xml:lang="en">record</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&co;List"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Track -->
+
+    <owl:Class rdf:about="&mo;Track">
+        <rdfs:label xml:lang="en">track</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&co;ListItem"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/Bag -->
+
+    <rdf:Description rdf:about="&oldco;Bag"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/Collection -->
+
+    <rdf:Description rdf:about="&oldco;Collection"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/Item -->
+
+    <rdf:Description rdf:about="&oldco;Item"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/List -->
+
+    <rdf:Description rdf:about="&oldco;List"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/ListItem -->
+
+    <rdf:Description rdf:about="&oldco;ListItem"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/collections/Set -->
+
+    <rdf:Description rdf:about="&oldco;Set"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag -->
+
+    <rdf:Description rdf:about="&bag;Bag"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item -->
+
+    <rdf:Description rdf:about="&bag;Item"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection -->
+
+    <rdf:Description rdf:about="&collectionentity;Collection"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#List -->
+
+    <rdf:Description rdf:about="&list;List"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem -->
+
+    <rdf:Description rdf:about="&list;ListItem"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set -->
+
+    <rdf:Description rdf:about="&set;Set"/>
+    
+
+
+    <!-- http://www.openarchives.org/ore/items/Aggregation -->
+
+    <owl:Class rdf:about="&ore;Aggregation">
+        <rdfs:label xml:lang="en">aggregation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&co;Collection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.openarchives.org/ore/items/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openarchives.org/ore/items/Proxy -->
+
+    <owl:Class rdf:about="&ore;Proxy">
+        <rdfs:label xml:lang="en">proxy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&co;ListItem"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.openarchives.org/ore/items/"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/mo/ -->
+
+    <owl:Thing rdf:about="http://purl.org/ontology/mo/">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label>http://purl.org/ontology/mo/</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.openarchives.org/ore/items/ -->
+
+    <owl:Thing rdf:about="http://www.openarchives.org/ore/items/">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label>http://www.openarchives.org/ore/items/</rdfs:label>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.2.1782) http://owlapi.sourceforge.net -->
+

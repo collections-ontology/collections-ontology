@@ -46,5 +46,5 @@ public interface COCollection<E> extends Collection<E> {
 	 * 
 	 * @return an URI identifying this collection.
 	 */
-	public URI getCOId();
+	public URI getURI();
 }

@@ -60,7 +60,7 @@ public class StandardCOEnvironment<E> implements COEnvironment<E> {
 	 * entity handled by this environment.
 	 */
 	protected COList<E> createCOList(COList<E> coll) throws ExistingCOEntityException {
-		URI id = coll.getCOId();
+		URI id = coll.getURI();
 		coll.clear();
 		
 		check(id);
@@ -117,7 +117,7 @@ public class StandardCOEnvironment<E> implements COEnvironment<E> {
 	 * entity handled by this environment.
 	 */
 	protected COBag<E> createCOBag(COBag<E> coll) throws ExistingCOEntityException {
-		URI id = coll.getCOId();
+		URI id = coll.getURI();
 		coll.clear();
 		
 		check(id);
@@ -174,7 +174,7 @@ public class StandardCOEnvironment<E> implements COEnvironment<E> {
 	 * entity handled by this environment.
 	 */
 	protected COSet<E> createCOSet(COSet<E> coll) throws ExistingCOEntityException {
-		URI id = coll.getCOId();
+		URI id = coll.getURI();
 		coll.clear();
 		
 		check(id);
@@ -293,7 +293,7 @@ public class StandardCOEnvironment<E> implements COEnvironment<E> {
 
 	@Override
 	public boolean removeCollection(COCollection<E> coll) {
-		URI id = coll.getCOId();
+		URI id = coll.getURI();
 		
 		boolean result = getCollection(id) != null;
 		

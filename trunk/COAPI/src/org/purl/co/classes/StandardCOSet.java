@@ -35,7 +35,7 @@ public class StandardCOSet<E> extends HashSet<E> implements COSet<E> {
 	}
 	
 	@Override
-	public URI getCOId() {
+	public URI getURI() {
 		return id;
 	}
 	

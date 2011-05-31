@@ -145,8 +145,8 @@ public class StandardCOList<E> extends ArrayList<E> implements COList<E> {
 	}
 
 	@Override
-	public URI getCOId() {
-		return bag.getCOId();
+	public URI getURI() {
+		return bag.getURI();
 	}
 
 	@Override

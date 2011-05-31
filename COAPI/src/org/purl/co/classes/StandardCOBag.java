@@ -44,7 +44,7 @@ public class StandardCOBag<E> extends ConcurrentLinkedQueue<E> implements COBag<
 	}
 	
 	@Override
-	public URI getCOId() {
+	public URI getURI() {
 		return id;
 	}
 

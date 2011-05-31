@@ -56,15 +56,15 @@ public class StandardCOList<E> extends ArrayList<E> implements COList<E> {
 	}
 
 	@Override
-	public boolean add(URI coitemuri, int index, E o) {
+	public boolean add(URI itemURI, int index, E o) {
 		boolean result = false;
 		
-		StandardCOListItem<E> item = new StandardCOListItem<E>(coitemuri, o, this);
+		StandardCOListItem<E> item = new StandardCOListItem<E>(itemURI, o, this);
 		
 		if (!items.contains(item)) {
 			items.add(item);
 			super.add(index, o);
-			result = bag.add(coitemuri, o);
+			result = bag.add(itemURI, o);
 		}
 		
 		return result;

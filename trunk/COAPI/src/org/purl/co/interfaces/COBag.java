@@ -32,7 +32,7 @@ public interface COBag<E> extends COCollection<E> {
 	 * 
 	 * @return a set containing all the URIs of CO items.
 	 */
-	public Set<URI> itemURIs();
+	public Set<URI> itemsURIs();
 	
 	/**
 	 * This method returns all the CO items in the bag that dereference the object.

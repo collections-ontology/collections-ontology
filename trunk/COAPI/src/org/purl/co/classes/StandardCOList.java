@@ -160,8 +160,8 @@ public class StandardCOList<E> extends ArrayList<E> implements COList<E> {
 	}
 
 	@Override
-	public Set<URI> itemURIs() {
-		return bag.itemURIs();
+	public Set<URI> itemsURIs() {
+		return bag.itemsURIs();
 	}
 
 }

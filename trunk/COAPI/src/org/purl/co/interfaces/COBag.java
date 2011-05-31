@@ -46,12 +46,12 @@ public interface COBag<E> extends COCollection<E> {
 	 * This method adds a new object to the bag, that will be dereferenced through a new CO item created starting
 	 * from the URI specified as input.
 	 * 
-	 * @param coitemuri the URI of the item dereferencing the object of the bag.
+	 * @param itemURI the URI of the item dereferencing the object of the bag.
 	 * @param o the object to add.
 	 * @return true if the object it is correctly added, false otherwise - i.e., {@code coitemuri} exists
 	 * within the bag. 
 	 */
-	public boolean add(URI coitemuri, E o);
+	public boolean add(URI itemURI, E o);
 	
 	/**
 	 * This method removes from the bag the CO item indicated and, consequently, decreases by 1 the number

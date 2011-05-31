@@ -109,15 +109,15 @@ public class StandardCOBag<E> extends ConcurrentLinkedQueue<E> implements COBag<
 	}
 
 	@Override
-	public boolean add(URI coitemuri, E o) {
+	public boolean add(URI itemURI, E o) {
 		boolean result = false;
 		
-		StandardCOItem<E> item = new StandardCOItem<E>(coitemuri, o, this);
+		StandardCOItem<E> item = new StandardCOItem<E>(itemURI, o, this);
 		
 		if (!items.containsKey(item)) {
 			items.put(item, o);
-			if (coitemuri != null) {
-				itemURIs.add(coitemuri);
+			if (itemURI != null) {
+				itemURIs.add(itemURI);
 			}
 			
 			Set<COItem<E>> set = objects.get(o);

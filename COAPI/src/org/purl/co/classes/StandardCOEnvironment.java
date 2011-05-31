@@ -320,7 +320,7 @@ public class StandardCOEnvironment<E> implements COEnvironment<E> {
 			
 			Iterator<COBag<E>> ite = set.iterator();
 			while (!result && ite.hasNext()) {
-				result = ite.next().itemURIs().contains(id);
+				result = ite.next().itemsURIs().contains(id);
 			}
 		}
 		

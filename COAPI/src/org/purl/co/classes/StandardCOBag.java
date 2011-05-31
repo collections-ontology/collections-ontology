@@ -166,7 +166,7 @@ public class StandardCOBag<E> extends ConcurrentLinkedQueue<E> implements COBag<
 	}
 
 	@Override
-	public Set<URI> itemURIs() {
+	public Set<URI> itemsURIs() {
 		return new HashSet<URI>(itemURIs);
 	}
 	

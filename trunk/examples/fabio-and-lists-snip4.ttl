@@ -1,0 +1,47 @@
+# FaBiO and List - Snippet 4 - Leveraging inference
+
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix fabio:          <http://purl.org/spar/fabio/> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+@prefix co:				<http://purl.org/co/> .
+@prefix owl:			<http://www.w3.org/2002/07/owl#> .
+@prefix : 				<http://www.example.org/> .
+
+<> a owl:Ontology
+	; owl:imports <http://purl.org/spar/fabio>
+		, <http://purl.org/swan/2.0/foaf-essential/>
+		, <http://purl.org/co>
+	; rdfs:label "FaBiO and List - snippet 4"
+	; rdfs:comment "Leveraging inference" .
+
+:ListOfPeople owl:equivalentClass [ a owl:Class 
+        ; owl:intersectionOf ( 
+                co:List
+                [ a owl:Restriction 
+                        ; owl:onProperty co:item 
+                        ; owl:allValuesFrom [ a owl:Restriction 
+                                ; owl:onProperty co:itemContent 
+                                ; owl:allValuesFrom foaf:Person ] ] ) ] .
+
+<http://dblp.uni-trier.de/rec/bibtex/conf/owled/DrummondRSMHWS06> a fabio:ConferencePaper
+	; dcterms:title "Putting OWL in Order: Patterns for Sequences in OWL"
+	; dcterms:creator :authors .
+
+:authors a :ListOfPeople
+	; co:firstItem [ co:itemContent :a1
+	; co:nextItem  [ co:itemContent :a2
+	; co:nextItem  [ co:itemContent :a3
+	; co:nextItem  [ co:itemContent :a4
+	; co:nextItem  [ co:itemContent :a5
+	; co:nextItem  [ co:itemContent :a6
+	; co:nextItem  [ co:itemContent :a7 ] ] ] ] ] ] ] .
+
+:a1 a foaf:Person ; foaf:givenName "Nick" ; foaf:familyName "Drummond" .
+:a2 a foaf:Person ; foaf:givenName "Alan" ; foaf:familyName "Rector" .
+:a3 a foaf:Person ; foaf:givenName "Robert" ; foaf:familyName "Stevens" .
+:a4 a foaf:Person ; foaf:givenName "Georgina" ; foaf:familyName "Moulton" .
+:a5 a foaf:Person ; foaf:givenName "Matthew" ; foaf:familyName "Horridge" .
+:a6 a foaf:Person ; foaf:givenName "Hai H." ; foaf:familyName "Wang" .
+:a7 a foaf:Person ; foaf:givenName "Julian" ; foaf:familyName "Seidenberg" .

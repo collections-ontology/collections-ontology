@@ -1,0 +1,25 @@
+# ORE and CO - snippet 2 - Adding inference to sets and aggregations
+
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ore: 			<http://www.openarchives.org/ore/items/> .
+@prefix owl:			<http://www.w3.org/2002/07/owl#> .
+@prefix co:				<http://purl.org/co/> .
+@prefix doi: 			<http://dx.doi.org/> .
+@prefix :    			<http://www.example.com/> .
+
+<> a owl:Ontology
+	; owl:imports <http://purl.org/co>
+	; rdfs:label "ORE and CO - snippet 2"
+	; rdfs:comment "Adding inference to sets and aggregations" .
+
+ore:Aggregation a owl:Class
+	; owl:equivalentClass co:Set .
+
+ore:aggregates a owl:ObjectProperty
+	; owl:equivalentProperty co:element .
+
+:myOwnLibrary a ore:Aggregation
+    ; ore:aggregates
+          doi:10.1080/13614568.2010.497194 
+        , doi:10.1016/j.jbi.2008.04.010 .

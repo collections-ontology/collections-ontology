@@ -1,0 +1,24 @@
+# ORE and CO - snippet 1 - Set of cited papers
+
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ore: 			<http://www.openarchives.org/ore/items/> .
+@prefix owl:			<http://www.w3.org/2002/07/owl#> .
+@prefix co:				<http://purl.org/co/> .
+@prefix doi: 			<http://dx.doi.org/> .
+@prefix :    			<http://www.example.com/> .
+
+<> a owl:Ontology
+	; owl:imports <http://purl.org/co>
+	; rdfs:label "ORE and CO - snippet 1"
+	; rdfs:comment "Set of cited papers" .
+
+:myOwnLibrary a ore:Aggregation
+    ; ore:aggregates
+          doi:10.1080/13614568.2010.497194 
+        , doi:10.1016/j.jbi.2008.04.010 .
+
+:myOwnLibrary a co:Set
+    ; co:element
+          doi:10.1080/13614568.2010.497194 
+        , doi:10.1016/j.jbi.2008.04.010 .

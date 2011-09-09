@@ -1,0 +1,40 @@
+# ORE and CO - snippet 5 - Bibliographic reference lists
+
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ore: 			<http://www.openarchives.org/ore/items/> .
+@prefix owl:			<http://www.w3.org/2002/07/owl#> .
+@prefix co:				<http://purl.org/co/> .
+@prefix doi: 			<http://dx.doi.org/> .
+@prefix w3:				<http://www.w3.org/TR/> .
+@prefix dcterms:		<http://purl.org/dc/terms/> .
+@prefix :    			<http://www.example.com/> .
+
+<> a owl:Ontology
+	; owl:imports <http://purl.org/co>
+	; rdfs:label "ORE and CO - snippet 5"
+	; rdfs:comment "Bibliographic reference lists" .
+
+:paperOneBibliographicReferenceCollection a ore:Aggregation
+    ; ore:aggregates w3:owl2-syntax , w3:rdf-concepts .
+
+:proxy1 a ore:Proxy 
+    ; ore:proxyFor w3:owl2-syntax
+    ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
+      Structural Specification and Functional-Style Syntax" .
+
+:proxy2 a ore:Proxy 
+    ; ore:proxyFor w3:rdf-concepts
+    ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
+      Concepts and Abstract Syntax" .
+
+:paperOneBibliographicReferenceCollection a co:List
+    ; co:firstItem :proxy1
+    ; co:lastItem : proxy2 .
+
+:proxy1 a co:ListItem
+    ; co:nextItem :proxy2
+    ; co:itemContent w3:owl2-syntax .
+
+:proxy2 a co:ListItem
+    ; co:itemContent w3:rdf-concepts .

@@ -1,0 +1,54 @@
+# ORE and CO - snippet 4 - Inferences on bibliographic references
+
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ore: 			<http://www.openarchives.org/ore/items/> .
+@prefix owl:			<http://www.w3.org/2002/07/owl#> .
+@prefix co:				<http://purl.org/co/> .
+@prefix doi: 			<http://dx.doi.org/> .
+@prefix w3:				<http://www.w3.org/TR/> .
+@prefix dcterms:		<http://purl.org/dc/terms/> .
+@prefix :    			<http://www.example.com/> .
+
+<> a owl:Ontology
+	; owl:imports <http://purl.org/co>
+	; rdfs:label "ORE and CO - snippet 4"
+	; rdfs:comment "Inferences on bibliographic references" .
+
+ore:Aggregation a owl:Class
+	; owl:equivalentClass [ a owl:Class 
+        ; owl:unionOf ( 
+			co:Set
+			[ a owl:Class
+				; owl:intersectionOf (
+					co:Bag
+					[ a owl:Restriction 
+						; owl:onProperty co:item 
+						; owl:allValuesFrom ore:Proxy ] ) ] ) ] .
+
+ore:aggregates a owl:ObjectProperty
+	; owl:equivalentProperty co:element .
+
+ore:proxyIn a owl:ObjectProperty
+	; owl:equivalentProperty co:itemOf .
+
+ore:proxyFor a owl:ObjectProperty
+	; owl:equivalentProperty co:itemContent .
+
+:paperOneBibligraphicReferenceCollection a ore:Aggregation
+    ; co:item
+          [ ore:proxyFor w3:owl2-syntax
+              ; dcterms:bibliographicCitation "Motik, B. et al (2009). OWL 2 Web Ontology Language
+                Structural Specification and Functional-Style Syntax" ]
+        , [ ore:proxyFor w3:rdf-concepts
+              ; dcterms:bibliographicCitation "Klyne, G. et al (2004). Resource Description Framework (RDF):
+                Concepts and Abstract Syntax" ] .
+
+:paperTwoBibligraphicReferenceCollection a ore:Aggregation
+    ; co:item 
+          [ ore:proxyFor w3:owl2-syntax
+              ; dcterms:bibliographicCitation "OWL 2 Web Ontology Language Structural,
+                W3C Recommendation 27 October 2009" ]
+        , [ ore:proxyFor w3:rdf-sparql-query
+              ; dcterms:bibliographicCitation "SPARQL Query Language for RDF,
+                W3C Recommendation 15 January 2008" ] .

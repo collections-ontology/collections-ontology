@@ -36,13 +36,17 @@ public class JenaTest {
 			b1.add(m.createResource(uri+"b1_o3"));
 			b1.add(m.createResource(uri+"b1_o4"));
 			b1.add(m.createResource(uri+"b1_o5"));
+			b1.add(m.createResource(uri+"b1_o1"));
 			
 			COSet<Resource> s1 = env.createCOSet(URI.create(uri+"s1"));
 			s1.add(m.createResource(uri+"s1_o1"));
 			s1.add(m.createResource(uri+"s1_o2"));
 			s1.add(m.createResource(uri+"s1_o3"));
 			
-			System.out.println(new JenaRDFWriter(Format.Turtle).getStringRepresentation(env));
+			COEnvironment<Resource> env2 = 
+				new JenaRDFReader().read(new JenaRDFWriter(Format.Turtle).getStringRepresentation(env));
+			
+			System.out.println(new JenaRDFWriter(Format.Turtle).getStringRepresentation(env2));
 		} catch (ExistingCOEntityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

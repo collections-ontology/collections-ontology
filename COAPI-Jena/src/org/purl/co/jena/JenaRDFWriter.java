@@ -109,7 +109,7 @@ public class JenaRDFWriter implements COWriter<Resource> {
 		
 		for (COCollection<Resource> coll : env.getCollections()) {
 			Resource resource = null;
-			URI id = coll.getCOId();
+			URI id = coll.getURI();
 			if (id == null) {
 				resource = m.createResource();
 			} else {

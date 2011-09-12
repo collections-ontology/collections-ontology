@@ -1,6 +1,7 @@
 package org.purl.co.interfaces;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 
 /**
  * This interface represents a reader for CO representation. It must be opportunely implemented
@@ -26,6 +27,7 @@ public interface COReader<E> {
 	 * 
 	 * @param f the file containing the CO linearisation.
 	 * @return a new {@code COEnvironment} representing the input CO linearisation.
+	 * @throws FileNotFoundException Thrown when the file specified as input does not exist.
 	 */
-	public COEnvironment<E> read(File f);
+	public COEnvironment<E> read(File f) throws FileNotFoundException;
 }

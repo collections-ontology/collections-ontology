@@ -183,6 +183,6 @@ public class StandardCOBag<E> extends ConcurrentLinkedQueue<E> implements COBag<
 	
 	@Override
 	public boolean offer(E obj) {
-		return add(obj);
+		return super.offer(obj);
 	}
 }

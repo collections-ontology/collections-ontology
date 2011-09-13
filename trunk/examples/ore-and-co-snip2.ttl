@@ -5,7 +5,6 @@
 @prefix ore: 			<http://www.openarchives.org/ore/items/> .
 @prefix owl:			<http://www.w3.org/2002/07/owl#> .
 @prefix co:				<http://purl.org/co/> .
-@prefix doi: 			<http://dx.doi.org/> .
 @prefix :    			<http://www.example.com/> .
 
 <> a owl:Ontology
@@ -21,5 +20,5 @@ ore:aggregates a owl:ObjectProperty
 
 :myOwnLibrary a ore:Aggregation
     ; ore:aggregates
-          doi:10.1080/13614568.2010.497194 
-        , doi:10.1016/j.jbi.2008.04.010 .
+          <http://dx.doi.org/10.1080/13614568.2010.497194> 
+        , <http://dx.doi.org/10.1016/j.jbi.2008.04.010> .

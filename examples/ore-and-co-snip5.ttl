@@ -5,7 +5,6 @@
 @prefix ore: 			<http://www.openarchives.org/ore/items/> .
 @prefix owl:			<http://www.w3.org/2002/07/owl#> .
 @prefix co:				<http://purl.org/co/> .
-@prefix doi: 			<http://dx.doi.org/> .
 @prefix w3:				<http://www.w3.org/TR/> .
 @prefix dcterms:		<http://purl.org/dc/terms/> .
 @prefix :    			<http://www.example.com/> .
@@ -14,6 +13,11 @@
 	; owl:imports <http://purl.org/co>
 	; rdfs:label "ORE and CO - snippet 5"
 	; rdfs:comment "Bibliographic reference lists" .
+
+ore:aggregates a owl:ObjectProperty .
+ore:proxyIn a owl:ObjectProperty .
+ore:proxyFor a owl:ObjectProperty .
+dcterms:bibliographicCitation a owl:ObjectProperty .
 
 :paperOneBibliographicReferenceCollection a ore:Aggregation
     ; ore:aggregates w3:owl2-syntax , w3:rdf-concepts .

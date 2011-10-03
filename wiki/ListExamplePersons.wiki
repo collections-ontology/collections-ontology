@@ -100,3 +100,5 @@ It is possible to add labels and provenance data using the desired vocabulary. F
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
+
+You can find the [ COMPLETE EXAMPLE HERE].

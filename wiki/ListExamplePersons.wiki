@@ -95,3 +95,46 @@ list and (
            (person and (name value "Silvio Peroni")))
 )
 }}}
+
+4) All the lists where the first person is named 'Paolo Ciccarese' and the second is 'Marco Ocana' (given the transitive nature of the property 'is followed by' the answer is 'Collections Ontology Contributors'):
+{{{
+list and (
+      'has first item' some (item and
+            'has item content' some (person and (name value "Paolo Ciccarese"))
+            and
+            'is followed by' some (item  and
+                    ('has item content' some(person and(name value "Marco Ocana"))))
+      )
+)
+}}}
+
+5) All the lists containing a person named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
+{{{
+list and 'has item' some (
+     item and 'has item content' some (person and (name value "Paolo Ciccarese"))
+) 
+}}}
+
+6) Any list where a person named 'Paolo Ciccarese' is followed by a person named 'Silvio Peroni' (answer 'Collections Ontology Contributors'):
+{{{
+list and (
+    'has item' some (item and
+            'has item content' some (person and (name value "Paolo Ciccarese"))
+            and
+            'is followed by' some (item  and
+                    ('has item content' some(person and(name value "Silvio Peroni"))))
+      )
+)
+}}}
+
+7) All the lists where a person named 'Silvio Peroni' is preceeded by a person named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
+{{{
+list and (
+    'has item' some (item and
+            'has item content' some (person and (name value "Silvio Peroni"))
+            and
+            'is preceded by' some (item  and
+                    ('has item content' some(person and(name value "Paolo Ciccarese"))))
+      )
+)
+}}}

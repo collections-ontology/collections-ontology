@@ -140,6 +140,11 @@ list and (
 }}}
 
 == Examples of SPARQL Querying ==
+
+It is possible to query the above example through SPARQL. SPARQL is particularly helpful for negations.
+
+8) All the lists where the first person is named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
+
 {{{
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -156,6 +161,8 @@ SELECT ?list
 
 }}}
 
+
+9) All the lists where the first person is named 'Paolo Ciccarese' and the last person is not 'Silvio Peroni' (answer nothing):
 {{{
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>

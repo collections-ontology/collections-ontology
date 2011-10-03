@@ -43,3 +43,56 @@
     foaf:firstName "Silvio" ;
     foaf:lastName "Peroni" .
 }}}
+
+=== Adding provenance and labels ===
+It is possible to add labels and provenance data using the desired vocabulary. For example, the following file has been created manually by one of the contributors of the CO ontology.
+
+
+{{{
+# Snippet 2
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix co:  	 <http://purl.org/co/>.
+@prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dct:     <http://purl.org/dc/terms/>.
+
+<http://purl.org/co/example/1/list/1>
+    a co:List;
+    rdfs:label "Collections Ontology Contributors" ;
+    dct:created "2011-10-03" ;
+    dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+    co:firstItem <http://www.hcklab.org/foaf.rdf#me> ;
+    co:item :a1 ;
+    co:lastItem :a2 .
+
+:itemOne 
+    a co:Item ,
+    co:itemContent <http://www.hcklab.org/foaf.rdf#me> ;
+    co:followedBy :itemTwo .
+
+:itemTwo a co:Item ,
+    co:itemContent :a1 ;
+    co:followedBy :itemThree .
+
+:itemThree a co:Item ,
+    co:itemContent :a2 .
+ 		
+<http://www.hcklab.org/foaf.rdf#me> 
+    a foaf:Person ;
+    rdfs:label "Paolo Ciccarese" ;
+    foaf:firstName "Paolo" ;
+    foaf:lastName "Ciccarese" .
+    
+:a1
+    a foaf:Person ;
+    rdfs:label "Marco Ocana" ;
+    foaf:firstName "Marco" ;
+    foaf:lastName "Ocana" .
+    
+:a2
+    a foaf:Person ;
+    rdfs:label "Silvio Peroni" ;
+    foaf:firstName "Silvio" ;
+    foaf:lastName "Peroni" .
+}}}

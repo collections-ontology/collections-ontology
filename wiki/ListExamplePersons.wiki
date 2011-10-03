@@ -12,9 +12,9 @@
 
 <http://purl.org/co/example/1/list/1>
     a co:List;
-    co:hasFirstItem <http://www.hcklab.org/foaf.rdf#me> ;
-    co:hasItem :a1 ;
-    co:hasLastItem :a2 .
+    co:firstItem <http://www.hcklab.org/foaf.rdf#me> ;
+    co:item :a1 ;
+    co:lastItem :a2 .
 
 :itemOne 
     a co:Item ,
@@ -22,7 +22,7 @@
     co:followedBy :itemTwo .
 
 :itemTwo a co:Item ,
-    co:itemContent :a3 ;
+    co:itemContent :a1 ;
     co:followedBy :itemThree .
 
 :itemThree a co:Item ,

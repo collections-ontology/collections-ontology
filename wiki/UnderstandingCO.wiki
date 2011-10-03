@@ -11,12 +11,12 @@ Collections Ontology (CO) is an OWL ontology currently representing three differ
    * Introduction to the [StructureBag co:Bag]
  * *[StructureList List]* (or Sequence) implements an ordered collection of elements, where the same element may occur more than once
    * Introduction to the [StructureList co:List]
-   * List Example #1: [ListExamplePersons Defining the List of the CO contributors]
+   * List Example #1: [ListExamplePersons Defining and querying the List of the CO contributors]
 
 Alignments with other efforts:
  * [OREProxiesAndLists Handling ORE proxies with CO]
 Examples: 
- * [ListExamplePaperAuthorsFaBiO Defining and querying the list of authors of a paper in FaBiO using CO]
+ * [ListExamplePaperAuthorsFaBiO Defining the list of authors of a paper in FaBiO using CO]
 
 If you are interested in better understanding the reasons behind the creation of the Collections Ontology we would suggest starting reading the following pages:   
  # [RDFContainersAndCollections RDF Containers and Collections]  

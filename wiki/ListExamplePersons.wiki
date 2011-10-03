@@ -137,6 +137,6 @@ list and (
 )
 }}}
 
-References
+===References===
 
 If you use [http://hcklab.blogspot.com/2011/09/collections-ontology-v2-list-of-persons.html Protege here is a little guidance for the below example].

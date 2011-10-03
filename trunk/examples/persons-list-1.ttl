@@ -9,6 +9,8 @@
 
 <http://collections-ontology.googlecode.com/svn/trunk/examples/persons-list-1.ttl> 
 	rdf:type owl:Ontology ;
+	dct:created "2011-10-03" ;
+    dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
     owl:imports <http://collections-ontology.googlecode.com/svn/trunk/collections.owl> .
 
 this:person rdf:type owl:Class .

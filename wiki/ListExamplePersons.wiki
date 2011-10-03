@@ -102,3 +102,5 @@ It is possible to add labels and provenance data using the desired vocabulary. F
 }}}
 
 You can find the [ COMPLETE EXAMPLE HERE].
+
+== Examples of DL Querying ==

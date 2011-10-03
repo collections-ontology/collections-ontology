@@ -5,7 +5,7 @@
 Collections Ontology (CO) is an OWL ontology currently representing three different data structures: 
  * *[StructureSet Set]* implements a collection that cannot contain duplicate elements 
    * Introduction to the [StructureSet co:Set]
-   * Set Example #1: [SetExample1 Defining the Set of the CO contributors]
+   * Set Example #1: [SetExample1 Defining and querying the Set of the CO contributors]
    * Set Example #2: [SetsExample1AndFoafGroup Collections Ontology and FOAF Group]
  * *[StructureBag Bag]* implements a collection that can have multiple copies of each element ([StructureBag learn more])
    * Introduction to the [StructureBag co:Bag]

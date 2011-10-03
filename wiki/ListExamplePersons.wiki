@@ -8,7 +8,10 @@
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix co:  	 <http://purl.org/co/>.
-@prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
+@prefix this:    <http://collections-ontology.googlecode.com/svn/trunk/examples/persons-list-1.ttl#> .
+
+this:person rdf:type owl:Class .
+this:name rdf:type owl:DatatypeProperty .
 
 <http://purl.org/co/example/1/list/1>
     a co:List;
@@ -31,19 +34,19 @@
     co:itemContent :a2 .
  		
 <http://www.hcklab.org/foaf.rdf#me> 
-    a foaf:Person ;
-    foaf:firstName "Paolo" ;
-    foaf:lastName "Ciccarese" .
+    a this:person ;
+    rdfs:label "Paolo Ciccarese" ;
+    this:name "Paolo Ciccarese" .
     
 :a1
-    a foaf:Person ;
-    foaf:firstName "Marco" ;
-    foaf:lastName "Ocana" .
+    a this:person ;
+    rdfs:label "Marco Ocana" ;
+    this:name "Marco Ocana" .
     
 :a2
-    a foaf:Person ;
-    foaf:firstName "Silvio" ;
-    foaf:lastName "Peroni" .
+    a this:person ;
+    rdfs:label "Silvio Peroni" ;
+    this:name "Silvio Peroni" .
 }}}
 
 === Adding provenance and labels ===
@@ -55,9 +58,12 @@ It is possible to add labels and provenance data using the desired vocabulary. F
 
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix co:  	 <http://purl.org/co/>.
-@prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix dct:     <http://purl.org/dc/terms/>.
+@prefix this:    <http://collections-ontology.googlecode.com/svn/trunk/examples/persons-list-1.ttl#> .
+
+this:person rdf:type owl:Class .
+this:name rdf:type owl:DatatypeProperty .
 
 <http://purl.org/co/example/1/list/1>
     a co:List;
@@ -83,24 +89,21 @@ It is possible to add labels and provenance data using the desired vocabulary. F
     co:itemContent :a2 .
  		
 <http://www.hcklab.org/foaf.rdf#me> 
-    a foaf:Person ;
+    a this:person ;
     rdfs:label "Paolo Ciccarese" ;
-    foaf:firstName "Paolo" ;
-    foaf:lastName "Ciccarese" .
+    this:name "Paolo Ciccarese" .
     
 :a1
-    a foaf:Person ;
+    a this:person ;
     rdfs:label "Marco Ocana" ;
-    foaf:firstName "Marco" ;
-    foaf:lastName "Ocana" .
+    this:name "Marco Ocana" .
     
 :a2
-    a foaf:Person ;
+    a this:person ;
     rdfs:label "Silvio Peroni" ;
-    foaf:firstName "Silvio" ;
-    foaf:lastName "Peroni" .
+    this:name "Silvio Peroni" .
 }}}
 
-You can find the [ COMPLETE EXAMPLE HERE].
+You can find the [http://collections-ontology.googlecode.com/svn/trunk/examples/persons-list-1.ttl COMPLETE EXAMPLE HERE].
 
 == Examples of DL Querying ==

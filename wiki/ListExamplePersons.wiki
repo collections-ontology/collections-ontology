@@ -3,3 +3,43 @@
 *List example #1*
 == Defining the List of the CO contributors ==
 
+{{{
+# Snippet 1
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix co:  	 <http://purl.org/co/>.
+@prefix foaf:  	 <http://xmlns.com/foaf/0.1/>.
+
+<http://purl.org/co/example/1/list/1>
+    a co:List;
+    co:hasFirstItem <http://www.hcklab.org/foaf.rdf#me> ;
+    co:hasItem :a1 ;
+    co:hasLastItem :a2 .
+
+:itemOne 
+    a co:Item ,
+    co:itemContent <http://www.hcklab.org/foaf.rdf#me> ;
+    co:followedBy :itemTwo .
+
+:itemTwo a co:Item ,
+    co:itemContent :a3 ;
+    co:followedBy :itemThree .
+
+:itemThree a co:Item ,
+    co:itemContent :a2 .
+ 		
+<http://www.hcklab.org/foaf.rdf#me> 
+    a foaf:Person ;
+    foaf:firstName "Paolo" ;
+    foaf:lastName "Ciccarese" .
+    
+:a1
+    a foaf:Person ;
+    foaf:firstName "Marco" ;
+    foaf:lastName "Ocana" .
+    
+:a2
+    a foaf:Person ;
+    foaf:firstName "Silvio" ;
+    foaf:lastName "Peroni" .
+}}}

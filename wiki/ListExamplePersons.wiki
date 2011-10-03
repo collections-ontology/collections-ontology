@@ -3,6 +3,8 @@
 *List example #1*
 == Defining the List of the CO contributors ==
 
+If you use [http://hcklab.blogspot.com/2011/09/collections-ontology-v2-list-of-persons.html Protege here is a little guidance for the below example].
+
 {{{
 # Snippet 1
 

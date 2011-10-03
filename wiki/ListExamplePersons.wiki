@@ -141,7 +141,7 @@ list and (
 
 == Examples of SPARQL Querying ==
 
-It is possible to query the above example through SPARQL. SPARQL is particularly helpful for negations.
+It is possible to query the above example through SPARQL. SPARQL is particularly helpful for negations. For validating your SPARQL queries you can use the [http://sws.ifi.uio.no/sparqler/validator.html Online SPARQL Validator] and for testing the following queries you can use [http://www.sparql.org/sparql.html Online SPARQL processor]
 
 8) All the lists where the first person is named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
 
@@ -186,6 +186,4 @@ SELECT ?list
 
 ===References===
 
-If you use [http://hcklab.blogspot.com/2011/09/collections-ontology-v2-list-of-persons.html Protege here is a little guidance for the below example].
-[http://www.sparql.org/sparql.html Online SPARQL processor]
-[http://sws.ifi.uio.no/sparqler/validator.html SPARQL Validator]
+If you use [http://hcklab.blogspot.com/2011/09/collections-ontology-v2-list-of-persons.html Protege here is a little guidance for the above example].

@@ -1,5 +1,7 @@
 #summary Set in Collections Ontology
 
+[UnderstandingCO << Understanding CO]
+
 == Set ==
 A *Set* is a collection that cannot contain duplicate elements. All the elements of the set are directly linked to it through the property _co:element_. In RDF, identical elements connected by the same property are, by default, treated as items of a set.
 

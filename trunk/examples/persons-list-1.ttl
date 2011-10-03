@@ -32,24 +32,24 @@ this:name rdf:type owl:DatatypeProperty .
 
 :itemTwo 
     a co:Item ;
-    co:itemContent :a1 ;
+    co:itemContent :MarcoOcana ;
     co:followedBy :itemThree .
 
 :itemThree 
     a co:Item ;
-    co:itemContent :a2 .
+    co:itemContent :SilvioPeroni .
                 
 <http://www.hcklab.org/foaf.rdf#me> 
     a this:person ;
     rdfs:label "Paolo Ciccarese" ;
     this:name "Paolo Ciccarese" .
     
-:a1
+:MarcoOcana
     a this:person ;
     rdfs:label "Marco Ocana" ;
     this:name "Marco Ocana" .
     
-:a2
+:SilvioPeroni
     a this:person ;
     rdfs:label "Silvio Peroni" ;
     this:name "Silvio Peroni" .

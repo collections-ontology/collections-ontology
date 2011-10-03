@@ -72,3 +72,26 @@ It is possible to add labels and provenance data using the desired vocabulary. F
 You can find the [http://collections-ontology.googlecode.com/svn/trunk/examples/persons-list-1.ttl COMPLETE EXAMPLE HERE].
 
 == Examples of DL Querying ==
+
+1) All the items that have item content (has item content) persons with name "Paolo Ciccarese": 
+{{{
+item and 'has item content' some (person and (name value "Paolo Ciccarese"))
+}}}
+
+2) All the lists where the first person is named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
+{{{
+list and 'has first item' some (
+     item and 'has item content' some (person and (name value "Paolo Ciccarese"))
+)
+}}}
+
+3) All the persons lists where the first item points to a person named 'Paolo Ciccarese' and the last item points to a person named 'Silvio Peroni' (answer 'Collections Ontology Contributors'):
+{{{
+list and (
+    'has first item' some (item and 'has item content' some
+           (person and (name value "Paolo Ciccarese")))
+    and
+    'has last item' some (item and 'has item content' some
+           (person and (name value "Silvio Peroni")))
+)
+}}}

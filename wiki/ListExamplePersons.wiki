@@ -17,9 +17,9 @@ this:name rdf:type owl:DatatypeProperty .
 
 <http://purl.org/co/example/1/list/1>
     a co:List;
-    co:firstItem <http://www.hcklab.org/foaf.rdf#me> ;
-    co:item :a1 ;
-    co:lastItem :a2 .
+    co:firstItem :itemOne ;
+    co:item :itemTwo ;
+    co:lastItem :itemThree .
 
 :itemOne 
     a co:Item ;
@@ -28,24 +28,24 @@ this:name rdf:type owl:DatatypeProperty .
 
 :itemTwo 
     a co:Item ;
-    co:itemContent :a1 ;
+    co:itemContent :MarcoOcana ;
     co:followedBy :itemThree .
 
 :itemThree 
     a co:Item ;
-    co:itemContent :a2 .
+    co:itemContent :SilvioPeroni .
  		
 <http://www.hcklab.org/foaf.rdf#me> 
     a this:person ;
     rdfs:label "Paolo Ciccarese" ;
     this:name "Paolo Ciccarese" .
     
-:a1
+:MarcoOcana
     a this:person ;
     rdfs:label "Marco Ocana" ;
     this:name "Marco Ocana" .
     
-:a2
+:SilvioPeroni
     a this:person ;
     rdfs:label "Silvio Peroni" ;
     this:name "Silvio Peroni" .
@@ -64,8 +64,8 @@ It is possible to add labels and provenance data using the desired vocabulary. F
     dct:created "2011-10-03" ;
     dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
     co:firstItem <http://www.hcklab.org/foaf.rdf#me> ;
-    co:item :a1 ;
-    co:lastItem :a2 .
+    co:item :MarcoOcana ;
+    co:lastItem :SilvioPeroni .
 
 }}}
 

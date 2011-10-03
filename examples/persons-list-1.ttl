@@ -1,0 +1,53 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix co:      <http://purl.org/co/>.
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dct:     <http://purl.org/dc/terms/>.
+@prefix this: <http://collections-ontology.googlecode.com/svn/trunk/examples/persons-list-1.ttl#> .
+@prefix : <http://collections-ontology.googlecode.com/svn/trunk/examples/persons-list-1.ttl#> .
+@base <http://collections-ontology.googlecode.com/svn/trunk/examples/persons-list-1.ttl> .
+
+<http://collections-ontology.googlecode.com/svn/trunk/examples/persons-list-1.ttl> 
+	rdf:type owl:Ontology ;
+    owl:imports <http://collections-ontology.googlecode.com/svn/trunk/collections.owl> .
+
+this:person rdf:type owl:Class .
+this:name rdf:type owl:DatatypeProperty .
+
+<http://purl.org/co/example/1/list/1>
+    a co:List;
+    rdfs:label "Collections Ontology Contributors" ;
+    dct:created "2011-10-03" ;
+    dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+    co:firstItem :itemOne ;
+    co:item :itemTwo ;
+    co:lastItem :itemThree .
+
+:itemOne 
+    a co:Item ;
+    co:itemContent <http://www.hcklab.org/foaf.rdf#me> ;
+    co:followedBy :itemTwo .
+
+:itemTwo 
+    a co:Item ;
+    co:itemContent :a1 ;
+    co:followedBy :itemThree .
+
+:itemThree 
+    a co:Item ;
+    co:itemContent :a2 .
+                
+<http://www.hcklab.org/foaf.rdf#me> 
+    a this:person ;
+    rdfs:label "Paolo Ciccarese" ;
+    this:name "Paolo Ciccarese" .
+    
+:a1
+    a this:person ;
+    rdfs:label "Marco Ocana" ;
+    this:name "Marco Ocana" .
+    
+:a2
+    a this:person ;
+    rdfs:label "Silvio Peroni" ;
+    this:name "Silvio Peroni" .

@@ -29,12 +29,12 @@ this:name rdf:type owl:DatatypeProperty .
 :itemOne 
     a co:Item ;
     co:itemContent <http://www.hcklab.org/foaf.rdf#me> ;
-    co:followedBy :itemTwo .
+    co:nextItem :itemTwo .
 
 :itemTwo 
     a co:Item ;
     co:itemContent :MarcoOcana ;
-    co:followedBy :itemThree .
+    co:nextItem :itemThree .
 
 :itemThree 
     a co:Item ;

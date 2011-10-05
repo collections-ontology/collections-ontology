@@ -85,7 +85,18 @@ list and 'has first item' some (
 )
 }}}
 
-3) All the persons lists where the first item points to a person named 'Paolo Ciccarese' and the last item points to a person named 'Silvio Peroni' (answer 'Collections Ontology Contributors'):
+3) All the persons lists where the first item points to a person named 'Paolo Ciccarese' and the second item points to a person named 'Silvio Peroni' (answer 'Collections Ontology Contributors'):
+{{{
+list and (
+    'has first item' some (item and 'has item content' some
+           (person and (name value "Paolo Ciccarese"))
+    and
+    'has next item' some (item and 'has item content' some
+           (person and (name value "Marco Ocana"))))
+)
+}}}
+
+4) All the persons lists where the first item points to a person named 'Paolo Ciccarese' and the last item points to a person named 'Silvio Peroni' (answer 'Collections Ontology Contributors'):
 {{{
 list and (
     'has first item' some (item and 'has item content' some
@@ -96,7 +107,29 @@ list and (
 )
 }}}
 
-4) All the lists where the first person is named 'Paolo Ciccarese' and the second is 'Marco Ocana' (given the transitive nature of the property 'is followed by' the answer is 'Collections Ontology Contributors'):
+5) All the persons lists where the last item points to a person named 'Silvio Peroni' and the previous item points to a person named 'Marco Ocana' (answer 'Collections Ontology Contributors'):
+{{{
+list and (
+    'has last item' some (item and 'has item content' some
+           (person and (name value "Silvio Peroni"))
+    and
+    'has previous item' some (item and 'has item content' some
+           (person and (name value "Marco Ocana"))))
+)
+}}}
+
+6) All the persons lists where the last item points to a person named 'Silvio Peroni' and is preceded by an item points to a person named 'Marco Ocana' (answer 'Collections Ontology Contributors'):
+{{{
+list and (
+    'has last item' some (item and 'has item content' some
+           (person and (name value "Silvio Peroni"))
+    and
+    'is preceded by' some (item and 'has item content' some
+           (person and (name value "Paolo Ciccarese"))))
+)
+}}}
+
+7) All the lists where the first person is named 'Paolo Ciccarese' and the second is 'Marco Ocana' (given the transitive nature of the property 'is followed by' the answer is 'Collections Ontology Contributors'):
 {{{
 list and (
       'has first item' some (item and
@@ -108,14 +141,14 @@ list and (
 )
 }}}
 
-5) All the lists containing a person named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
+8) All the lists containing a person named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
 {{{
 list and 'has item' some (
      item and 'has item content' some (person and (name value "Paolo Ciccarese"))
 ) 
 }}}
 
-6) Any list where a person named 'Paolo Ciccarese' is followed by a person named 'Silvio Peroni' (answer 'Collections Ontology Contributors'):
+9) Any list where a person named 'Paolo Ciccarese' is followed by a person named 'Silvio Peroni' (answer 'Collections Ontology Contributors'):
 {{{
 list and (
     'has item' some (item and
@@ -127,7 +160,7 @@ list and (
 )
 }}}
 
-7) All the lists where a person named 'Silvio Peroni' is preceeded by a person named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
+10) All the lists where a person named 'Silvio Peroni' is preceeded by a person named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
 {{{
 list and (
     'has item' some (item and
@@ -143,7 +176,7 @@ list and (
 
 It is possible to query the above example through SPARQL. SPARQL is particularly helpful for negations. For validating your SPARQL queries you can use the [http://sws.ifi.uio.no/sparqler/validator.html Online SPARQL Validator] and for testing the following queries you can use [http://www.sparql.org/sparql.html Online SPARQL processor]
 
-8) All the lists where the first person is named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
+11) All the lists where the first person is named 'Paolo Ciccarese' (answer 'Collections Ontology Contributors'):
 
 {{{
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -162,7 +195,7 @@ SELECT ?list
 }}}
 
 
-9) All the lists where the first person is named 'Paolo Ciccarese' and the last person is not 'Silvio Peroni' (answer nothing):
+12) All the lists where the first person is named 'Paolo Ciccarese' and the last person is not 'Silvio Peroni' (answer nothing):
 {{{
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>

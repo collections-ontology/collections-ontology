@@ -22,22 +22,26 @@ this:name rdf:type owl:DatatypeProperty .
     rdfs:label "Collections Ontology Contributors" ;
     dct:created "2011-10-03" ;
     dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+    co:size 3;
     co:firstItem :itemOne ;
     co:item :itemTwo ;
     co:lastItem :itemThree .
 
 :itemOne 
     a co:Item ;
+    co:index 1;
     co:itemContent <http://www.hcklab.org/foaf.rdf#me> ;
     co:nextItem :itemTwo .
 
 :itemTwo 
     a co:Item ;
+    co:index 2;
     co:itemContent :MarcoOcana ;
     co:nextItem :itemThree .
 
 :itemThree 
     a co:Item ;
+    co:index 3;
     co:itemContent :SilvioPeroni .
                 
 <http://www.hcklab.org/foaf.rdf#me> 

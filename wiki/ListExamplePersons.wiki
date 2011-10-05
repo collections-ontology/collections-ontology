@@ -221,7 +221,7 @@ SELECT ?list
   }
 }}}
 
-13) All the people in the list, returned according to the list order (answer 'Paolo Ciccarese', 'Marco Ocana' and 'Silvio Peroni').
+13) All the people in the list, returned according to the list order (answer 'Paolo Ciccarese', 'Marco Ocana' and 'Silvio Peroni'). This is possible when the indexes (_co:index_) have been attributed to the items.
 
 In the current example the person named 'Paolo Ciccarese' is related to the list as content of itemOne 'firstItem' of the list and the person named 'Silvio Peroni' is related to the list as content of itemThree through 'lastItem'. As SPARQL is not performing inference it is necessary to include the three possible cases in the query (UNION):
 

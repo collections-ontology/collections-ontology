@@ -221,6 +221,31 @@ SELECT ?list
   }
 }}}
 
+13) All the people in the list, returned according to the list order.
+
+As the current example contains...
+
+{{{
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX co: <http://purl.org/co/>
+PREFIX this: <http://collections-ontology.googlecode.com/svn/trunk/examples/persons-list-1.ttl#> 
+
+SELECT ?person
+WHERE {
+    {
+        ?list co:item ?item .
+    } UNION {
+        ?list co:firstItem ?item .
+    } UNION {
+        ?list co:lastItem ?item .
+    }
+    ?item co:itemContent ?person . 
+    ?item co:index ?index .
+}
+ORDER BY ?index
+}}}
 
 ===References===
 

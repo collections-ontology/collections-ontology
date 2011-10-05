@@ -1,8 +1,11 @@
 #summary Defining and querying the List of the CO contributors
 
-[UnderstandingCO << Understanding CO]
+<table width="100%">
+<tr>
+<td>[UnderstandingCO << Understanding CO]</td><td align="right">*List example #1*</td>
+</tr>
+</table>
 
-*List example #1*
 == Defining the List of the CO contributors ==
 
 [http://3.bp.blogspot.com/-RciVBIPBOAY/Tn_UyPywrOI/AAAAAAAAAHs/Mw2aC4k8zEc/s1600/Collections+Ontology+%2528CO%2529+example+by+Paolo+Ciccarese.png]

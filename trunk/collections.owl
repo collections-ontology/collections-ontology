@@ -288,7 +288,8 @@
      -->
 
     
-
+	<!-- http://www.essepuntato.it/2009/10/error/hasError -->
+	<owl:DatatypeProperty rdf:about="http://www.essepuntato.it/2009/10/error/hasError" />
 
     <!-- http://purl.org/co/index -->
 

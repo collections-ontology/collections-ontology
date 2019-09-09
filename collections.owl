@@ -36,7 +36,7 @@
         <dc:title xml:lang="en">The Collections Ontology
 (CO)</dc:title>
         <dc:creator rdf:resource="http://www.paolociccarese.info"/>
-        <owl:imports rdf:resource="http://www.essepuntato.it/2009/10/error"/>
+        <owl:imports rdf:resource="http://purl.org/spar/error"/>
     </owl:Ontology>
     
 
